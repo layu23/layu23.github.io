@@ -1,0 +1,40 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+#allWeb{
+width: 100%;
+height: 1000px;
+background: #e2c027
+}
+#banner{
+width: 100%;
+height: 100px;
+background: #2B292A;
+}
+#logoArea{
+width: 220px;
+height: 100px;
+position: absolute;
+left: 100px;
+border: 1px solid white
+}
+#logo{
+float: left;
+}
+#logoText{
+float: left;
+line-height: 100px;
+font-size: 32px;
+color: white;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: bold
+}
+
+video{
+    width: 500px;
+    height: 250px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
