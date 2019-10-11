@@ -1,23 +1,29 @@
 body{
     padding: 0;
-    margin: 0;
+	margin: 0;
+	background: url("img/testPage.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 #allWeb{
 width: 100%;
-height: 1000px;
-background: #e2c027
 }
 #banner{
 width: 100%;
 height: 100px;
 background: #2B292A;
+position: fixed;
+z-index: 3;
+-moz-box-shadow:1px 5px 5px #333333; 
+-webkit-box-shadow:1px 3px 5px #333333; 
+box-shadow:1px 5px 5px #333333;
 }
 #logoArea{
 width: 220px;
 height: 100px;
 position: absolute;
-left: 100px;
-border: 1px solid white
+left: 300px;
 }
 #logo{
 float: left;
@@ -31,10 +37,96 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-weight: bold
 }
 
-video{
-    width: 500px;
-    height: 250px;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
+#bodyArea{
+    width: 70%;
+	height: 2000px;
+	position: relative;
+	top: 100px;
+	margin: 0 auto;
 }
+#bodyLeft{
+	width: 15%;
+	height:900px;
+	background-color:#35333c;
+	color:white;
+	float:left;
+	position: fixed;
+}
+#adv{
+	width: 100%;
+	height: 100px;
+	margin-top: 10px;
+	font-size: 16px;
+}
+#contact{
+	width: 100px;
+	height:100px;
+	list-style: none;
+	padding: 0;
+	margin: auto;
+}
+.platform{
+	width: 48%;
+	height:40px;
+	border: 1px solid;
+	float: left;
+}
+.platform:nth-child(1){
+	background-image: url("qq标.png");
+}
+
+
+#menu{
+	list-style: none;
+	padding: 0;
+}
+#menu li{
+	padding: 20px 0;
+	border-bottom: 1px solid;
+	transition: all 1s linear;
+}
+#menu li:hover{
+	background: #fed71a;
+	cursor: pointer;
+      transition: 0.2s;
+      transition-duration:1s;
+	  transform: translateX(5px);
+	 transition-timing-function:ease-in-out;
+	 color:black;
+
+}
+#knows{
+	width:80%;
+	height:1000px;
+	background-color:white;
+	float:left;
+	position: absolute;
+	left: 280PX;
+}
+#knows2{
+	width:80%;
+	height:1000px;
+	background-color:white;
+	float:left;
+	position: absolute;
+	left: 280PX;
+}
+#konwsCenter{
+	background-image: url("img/xhx.jpg");
+	background-size: cover;
+	width:800px;
+	height:400px;
+	margin:auto
+}
+#konwsCenter2{
+	background-image: url("img/testPage.jpg");
+	background-size: cover;
+	width:800px;
+	height:400px;
+	margin:auto;
+}
+
+
+
+	
+	
