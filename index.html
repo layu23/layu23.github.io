@@ -3,7 +3,6 @@
 <head>
     <link href="yfLogo.ico" rel="icon" type="image/x-icon">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>For/Know</title>
     <link href="index.css" rel="stylesheet" type="text/css">
 </head>
@@ -23,34 +22,72 @@
                 <div id="bodyLeft" style="text-align:center">
                     <div id="adv">
                         <ul id="contact">
-                            <li class="platform"></li>
-                            <li class="platform"></li>
-                            <li class="platform"></li>
-                            <li class="platform"></li>
+                            <li class="platform" value="0" onclick="goOutside(this.value)" ></li>
+                            <li class="platform" value="1" onclick="goOutside(this.value)"></li>
                         </ul>
                     </div>
                    <ul id="menu">
-                       <li style="border-top: 1px solid;">前端</li>
-                       <li>后端</li>
-                       <li>工具</li>
-                       <li>资源</li>
-                       <li>文章</li>
-
+                       <li style="border-top: 1px solid;" class="cli menuChange" value="0">
+                            前端
+                            <div class="hoverDiv"></div>
+                        </li>
+                            <ul class="show old">
+                                <li class="page lei" value="0">html</li>
+                                <li class="lei" value="1">css</li>
+                                <li class="lei" value="2">js</li>
+                            </ul>
+                       <li class="cli" value="1" id="menuCh2">
+                            <div class="hoverDiv"></div>
+                            后端
+                        </li>
+                            <ul class="show">
+                                <li class="lei">spring</li>
+                                <li class="lei">springboot</li>
+                                <li class="lei">js</li>
+                            </ul>
+                       <li class="cli" value="2">
+                            <div class="hoverDiv"></div>   
+                            工具
+                        </li>
+                        <ul class="show">
+                            <li class="lei">html</li>
+                            <li class="lei">css</li>
+                            <li class="lei">js</li>
+                        </ul>
+                       <li class="cli" value="3">
+                            <div class="hoverDiv"></div>
+                            资源
+                        </li>
+                        <ul class="show">
+                            <li class="lei">html</li>
+                            <li class="lei">css</li>
+                            <li class="lei">js</li>
+                        </ul>
+                       <li class="cli" value="4">
+                            <div class="hoverDiv"></div>
+                            文章
+                            
+                        </li>
+                        <ul class="show">
+                            <li class="lei">html</li>
+                            <li class="lei">css</li>
+                            <li class="lei">js</li>
+                        </ul>
+                       <li class="cli" value="5">
+                            <div class="hoverDiv xy"></div>
+                           好剧推荐                    
+                        </li>
+                        <ul class="show">
+                            <li class="lei">html</li>
+                            <li class="lei">css</li>
+                            <li class="lei">js</li>
+                            </ul>
                    </ul>
                    
                 </div>
             
                 <div id="knows">
-                	<div id="konwsCenter">
-                       
-                    </div>
-                    
-                </div>
-                <div id="knows2">
-                	<div id="konwsCenter2" );">
-                       
-                    </div>
-                    
+                    <iframe src="htmlWeb.html" frameborder="0" width="100%" height=100% id="pages"></iframe>
                 </div>
             </div>
             <!-- bottom部分-->
@@ -60,6 +97,35 @@
     </div>
 </body>
 </html>
+<script src="js\jquery-3.4.1.min.js"></script>
 <script>
+    var cha=document.getElementsByClassName("cli");
+    var old=document.getElementsByClassName("menuChange");
+    var happy = document.getElementsByClassName("show");
+    var all = document.getElementsByClassName("old");
+    var pa = document.getElementsByClassName("page");
+    var son = document.getElementsByClassName("lei");
+    var webPages = document.getElementById("pages");    
+    
+    // 页面列表      
+    var webs = ["htmlWeb.html","cssWeb.html","JSWeb.html"]; 
+    
+    $(".cli").click(function name(params) {
+        old[0].classList.remove("menuChange");
+        this.classList.add("menuChange");
+        all[0].classList.remove("old");
+        happy[this.value].classList.add("old");
+    })
+    $(".lei").click(function cha(params) {
+        pa[0].classList.remove("page");
+        this.classList.add("page");
+        webPages.src=webs[this.value]
+    })
 
+    // 链接微博、qq空间
+    var out = ["https://weibo.com/","https://user.qzone.qq.com/1614409248?source=aiostar"];
+    function goOutside(val) {
+        window.location.href = out[val];
+
+    }
 </script>

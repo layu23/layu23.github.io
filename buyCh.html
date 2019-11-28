@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>水仙花</title>
+    <style></style>
+</head>
+<body>
+    <h2>水仙花数</h2>
+</body>
+<ml>
+    <script>
+
+    var bai;
+    var ten;
+    var ge;
+    var all;
+    for (var num = 100; num<=999; num++) {
+        
+        bai = Math.floor(num/100);
+        ten = Math.floor(num/10)%10;
+        ge = num%10;
+        all = (bai*bai*bai)+(ten*ten*ten)+(ge*ge*ge);
+        if (all==num) {
+            document.write(num+"<br>");
+        }
+    }
+    
+    var a = 257;
+    var b = Math.floor(a/10)%10;
+    var c= a%10;
+    a = Math.floor(a/100);
+    var nums = 123123.1;
+    alert(Math.ceil(nums));
+    </script>

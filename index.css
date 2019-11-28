@@ -60,40 +60,101 @@ font-weight: bold
 #contact{
 	width: 100px;
 	height:100px;
+	position: relative;
+	top: 30px;
 	list-style: none;
 	padding: 0;
 	margin: auto;
+	cursor: pointer;
 }
 .platform{
 	width: 48%;
 	height:40px;
-	border: 1px solid;
 	float: left;
-}
-.platform:nth-child(1){
-	background-image: url("qq标.png");
+	cursor: pointer;
 }
 
+.platform:nth-child(1){
+	background-image: url("img/wb.jpg");
+}
+.platform:nth-child(2){
+	background-image: url("img/kjb.png");
+	
+	
+}
+.platform:hover{
+	border-radius: 4px;
+	box-shadow: 2px 3px black;
+}
 
 #menu{
 	list-style: none;
 	padding: 0;
-}
-#menu li{
-	padding: 20px 0;
-	border-bottom: 1px solid;
-	transition: all 1s linear;
-}
-#menu li:hover{
-	background: #fed71a;
-	cursor: pointer;
-      transition: 0.2s;
-      transition-duration:1s;
-	  transform: translateX(5px);
-	 transition-timing-function:ease-in-out;
-	 color:black;
 
 }
+.cli{
+	padding: 20px 0;
+	border-bottom: 1px solid white;
+	transition: all 0.5s linear;
+	position: relative;
+	cursor: pointer;
+	color: #E0D3D3;
+}
+.menuChange{
+	padding: 20px 0;
+	border-bottom: 1px solid white;
+	transition: all 0.5s ease-out;
+	position: relative;
+	background: #fcd337;
+	color: black;
+
+}
+.hoverDiv{
+	width: 10%;
+	height:100%;
+	-index: -1;
+	position: absolute;
+	left: 0;top: 0;
+	transition: all 0.5s ease-in-out 0.1s;
+}
+.cli:hover{
+	transform: translateX(10px);
+	color: white;
+	text-shadow: 2px 2px 1px black;
+}
+.cli:hover .hoverDiv{
+	background: #fcd337;
+}
+
+.show{
+	height: 0;
+	overflow: hidden;
+	transition: all 0.5s;
+}
+.lei{
+	border-bottom: 1px solid;
+	padding: 10px 0;
+	background-color: white;
+	list-style: none;
+	height: 30px;
+	color: black;
+
+}
+.page{
+	background-color: #EFEFEF;
+}
+
+.old{
+	height: 160px;
+}
+.show>li:hover{
+	cursor: pointer;
+	color: red;
+	text-shadow: 3px 3px 1px white;
+	cursor: pointer;
+}
+
+
 #knows{
 	width:80%;
 	height:1000px;
@@ -102,28 +163,8 @@ font-weight: bold
 	position: absolute;
 	left: 280PX;
 }
-#knows2{
-	width:80%;
-	height:1000px;
-	background-color:white;
-	float:left;
-	position: absolute;
-	left: 280PX;
-}
-#konwsCenter{
-	background-image: url("img/xhx.jpg");
-	background-size: cover;
-	width:800px;
-	height:400px;
-	margin:auto
-}
-#konwsCenter2{
-	background-image: url("img/testPage.jpg");
-	background-size: cover;
-	width:800px;
-	height:400px;
-	margin:auto;
-}
+
+
 
 
 	
