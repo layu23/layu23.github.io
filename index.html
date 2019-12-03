@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh">  
 <head>
     <link href="yfLogo.ico" rel="icon" type="image/x-icon">
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>For/Know</title>
     <link href="index.css" rel="stylesheet" type="text/css">
+    
 </head>
 <body>
     <!-- 总页面 -->
@@ -106,12 +107,12 @@
     var pa = document.getElementsByClassName("page");
     var son = document.getElementsByClassName("lei");
     var webPages = document.getElementById("pages");    
-    
     // 页面列表      
     var webs = ["htmlWeb.html","cssWeb.html","JSWeb.html"]; 
     
     $(".cli").click(function name(params) {
         old[0].classList.remove("menuChange");
+        
         this.classList.add("menuChange");
         all[0].classList.remove("old");
         happy[this.value].classList.add("old");
