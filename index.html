@@ -1,18 +1,46 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>固定定位</title>
-<link rel="stylesheet" href="css\index.css">
+<meta charset="utf-for8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>For-know</title>
+<link rel="stylesheet" href="css/index.css">
+<script src="js/jquery-3.4.1.min.js"></script>
 <style>
-@font-face {
-    font-family: 'thin';
-    src: url('font/SIMYOU.TTF');
-}
+
 </style>
 </head>
-
 <body>
-	<div id="a1">小广告</div>
+	<div id="da">
+		<div id="title">By <br>FanYu</div>
+		<div id="yuText"><img src="img/yuText.png" alt="" ></div>
+		<div id="quan"><img src="img/quan.png" alt="" ></div>
+		<div id="butt">
+			click
+		</div>
+	</div>	
 </body>
 </html>
+<script>
+	onload = show();
+	$("#butt").hover(function () {
+		$(this).css({"background":"yellow","color":"blueviolet"})
+	},function () {
+		$(this).css({"background":"#47484c","color":"white"})
+	})
+	//动画效果
+	function show() {
+		$("#yuText").animate({
+			right:"150px",
+			top:"100px"
+		},1000);
+		
+	}
+
+	$(function(){
+		
+	setTimeout(function () {
+		$("#quan").fadeIn();
+	},1000);
+	});
+</script>

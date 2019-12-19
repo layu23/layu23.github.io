@@ -1,9 +1,64 @@
-
-#a1{
-	width:500px;
-	height:500px;
-    background:#CC0;
-    font-family: 幼圆;
+*{
+    padding: 0;
+    margin: 0;
 }
+
+body{
+    background-color: #131124;
+}
+#da{
+    width: 900px;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+#title{
+    color: white;
+    font-size: 120px;
+    width: 550px;
+    position: absolute;
+    left: 180px;
+    top: 100px;
+    z-index: 3;
+    font-family: \5E7C\5706;
+    font-weight: bolder;
+    text-shadow:5px 5px 5px black;
+    -moz-box-shadow:2px 2px 5px #cf7d1f; 
+    -webkit-box-shadow:2px 2px 5px #cf7d1f;
+     box-shadow:2px 2px 5px #cf7d1f;
+
+}
+#yuText{
+    width: 256px;
+    height: 256px;
+    position: absolute;
+}       
+#quan{
+    width: 256px;
+    height: 256px;
+    position: absolute;
+    right: 150px;
+    top: 100px;
+    display: none;
+}
+
+#butt{
+    width:300px;
+    height: 70px;
+    border-radius: 70px;
+    background-color: #47484c;
+    text-align: center;
+    color: white;
+    line-height: 70px;
+    position: absolute;
+    left: 300px;
+    top: 600px;
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    font-style:italic;
+}
+
 
 
