@@ -1,138 +1,19 @@
-<!DOCTYPE html>
-<html lang="zh">  
+<!doctype html>
+<html>
 <head>
-    <link href="yfLogo.ico" rel="icon" type="image/x-icon">
-    <meta charset="UTF-8">
-    <title>For/Know</title>
-    <link href="index.css" rel="stylesheet" type="text/css">
-    
+<meta charset="utf-8">
+<title>固定定位</title>
+<style>
+#a1{
+	width:500px;
+	height:500px;
+	background:#CC0;}
+</style>
 </head>
-<body>
-    <!-- 总页面 -->
-    <div id="allWeb">
-            <!-- banner部分 -->
-            <div id="banner">
-                <div id="logoArea">
-                    <img src="img/yuLogo.png"  id="logo">
-                    <div id="logoText">ForKnow</div>
-                </div>
 
-            </div>
-            <!-- body部分 -->
-            <div id="bodyArea">
-                <div id="bodyLeft" style="text-align:center">
-                    <div id="adv">
-                        <ul id="contact">
-                            <li class="platform" value="0" onclick="goOutside(this.value)" ></li>
-                            <li class="platform" value="1" onclick="goOutside(this.value)"></li>
-                        </ul>
-                    </div>
-                   <ul id="menu">
-                       <li style="border-top: 1px solid;" class="cli menuChange" value="0">
-                            前端
-                            <div class="hoverDiv"></div>
-                        </li>
-                            <ul class="show old">
-                                <li class="page lei" value="0">html</li>
-                                <li class="lei" value="1">css</li>
-                                <li class="lei" value="2">js</li>
-                            </ul>
-                       <li class="cli" value="1" id="menuCh2">
-                            <div class="hoverDiv"></div>
-                            后端
-                        </li>
-                            <ul class="show">
-                                <li class="lei">spring</li>
-                                <li class="lei">springboot</li>
-                                <li class="lei">js</li>
-                            </ul>
-                       <li class="cli" value="2">
-                            <div class="hoverDiv"></div>   
-                            工具
-                        </li>
-                        <ul class="show">
-                            <li class="lei">html</li>
-                            <li class="lei">css</li>
-                            <li class="lei">js</li>
-                        </ul>
-                       <li class="cli" value="3">
-                            <div class="hoverDiv"></div>
-                            资源
-                        </li>
-                        <ul class="show">
-                            <li class="lei">html</li>
-                            <li class="lei">css</li>
-                            <li class="lei">js</li>
-                        </ul>
-                       <li class="cli" value="4">
-                            <div class="hoverDiv"></div>
-                            文章
-                            
-                        </li>
-                        <ul class="show">
-                            <li class="lei">html</li>
-                            <li class="lei">css</li>
-                            <li class="lei">js</li>
-                        </ul>
-                       <li class="cli" value="5">
-                            <div class="hoverDiv xy"></div>
-                           好剧推荐                    
-                        </li>
-                        <ul class="show">
-                            <li class="lei">html</li>
-                            <li class="lei">css</li>
-                            <li class="lei">js</li>
-                            </ul>
-                   </ul>
-                   
-                </div>
-            
-                <div id="knows">
-                    <iframe src="htmlWeb.html" frameborder="0" width="100%" height=100% id="pages"></iframe>
-                </div>
-            </div>
-            <!-- bottom部分-->
-            <div>
-            	
-            </div>
-    </div>
+<body>
+<div id="a1">
+小广告
+</div>
 </body>
 </html>
-<script src="js\jquery-3.4.1.min.js"></script>
-<script>
-    var cha=document.getElementsByClassName("cli");
-    var old=document.getElementsByClassName("menuChange");
-    var happy = document.getElementsByClassName("show");
-    var all = document.getElementsByClassName("old");
-    var pa = document.getElementsByClassName("page");
-    var son = document.getElementsByClassName("lei");
-    var webPages = document.getElementById("pages");    
-    // 页面列表      
-    var webs = ["htmlWeb.html","cssWeb.html","JSWeb.html"]; 
-    
-    $(".cli").click(function name(params) {
-        old[0].classList.remove("menuChange");
-        
-        this.classList.add("menuChange");
-        all[0].classList.remove("old");
-        happy[this.value].classList.add("old");
-    })
-    $(".lei").click(function cha(params) {
-        pa[0].classList.remove("page");
-        this.classList.add("page");
-        webPages.src=webs[this.value]
-    })
-
-    // 链接微博、qq空间
-    var out = ["https://weibo.com/","https://user.qzone.qq.com/1614409248?source=aiostar"];
-    function goOutside(val) {
-        window.location.href = out[val];
-
-    }
-//     var backColor = ["red","blue","yellow","black"];
-
-// setInterval(function xx(params) {
-//     var a = parseInt(Math.random()*4)
-//     document.getElementsByTagName("body")[0].style.background = backColor[a];
-// },1000)
-</script>
