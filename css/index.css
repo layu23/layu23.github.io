@@ -7,61 +7,32 @@ body{
     background-color: #131124;
 }
 #da{
-    width: 700px;
+    width: 30%;
     height: 300px;
     border-radius: 100px;
     margin: 0 auto;
     position: relative;
      top: 250px;
 }
-#title{
-    color: white;
-    font-size: 50px;
-    width: 350px;
-    height:50px;
-    border: 1px solid;
-    position: absolute;
-    right: 200px;
-    top: 100px;
-    z-index: 3;
-    font-family: \5E7C\5706;
-    font-weight: bolder;
-    
-
-}
-#yuText{
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    z-index: 99;
-    bottom: 0;
-}       
-#quan{
-    width: 230px;
-    height: 230px;
-    position: absolute;
-    left:60px;
-    top: -20px;
+#textYu{
     display: none;
-    
 }
-
 #butt{
-    width:250px;
+    width:50%;
     height: 70px;
     text-align: center;
     color: white;
     line-height: 70px;
     position: absolute;
-    right: 130px;
-    top: 160px;
+    left: 23%;
+    top: 70%;
     cursor: pointer;
     font-size: 40px;    
     font-weight: bolder;
     letter-spacing: 5px;
     font-style:italic;
-    -moz-box-shadow:2px 2px 5px #c04851;
-    -webkit-box-shadow:2px 2px 5px #c04851;
+    -moz-box-shadow:2px 5px 5px #c04851;
+    -webkit-box-shadow:5px 2px 5px #c04851;
      box-shadow:5px 5px 5px #c04851;
 }
 

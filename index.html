@@ -13,10 +13,10 @@
 <body>
 	<div id="da">
 		<!-- <div id="title">ByFanYu</div> -->
-		<div id="yuText"><img src="img/yuText.png" alt="" ></div>
-		<div id="quan"><img src="img/quan.png" alt="" ></div>
+		<!-- <div id="yuText"><img src="img/yuText.png" alt="" ></div>
+		<div id="quan"><img src="img/quan.png" alt="" ></div> -->
 		<div id="butt">
-			ByFanYu
+			<div id="textYu">ByFanYu</div>
 		</div>
 	</div>	
 
@@ -26,22 +26,19 @@
 	onload = show();
 	$("#butt").hover(function () {
 		$(this).css({"background":"#fffef9","color":"#131124","border-radius":"20px"})
-		$("#quan").css({"top":"20px"})
 	},function () {
 		$(this).css({"background":"none","color":"white","border-radius":"0"})
-		$("#quan").css({"top":"-20px"})
 	})	
 	//动画效果
 	function show() {
-		$("#yuText").animate({
-			left:"70px",
-			top:"50px"
+		$("#butt").animate({
+			top:"40%"
 		},1000);
 	}
 
 	$(function(){		
 	setTimeout(function () {
-		$("#quan").fadeIn();
+		$("#textYu").fadeIn();
 	},1000);
 	});
 </script>
