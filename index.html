@@ -12,33 +12,34 @@
 </head>
 <body>
 	<div id="da">
-		<div id="title">By <br>FanYu</div>
+		<!-- <div id="title">ByFanYu</div> -->
 		<div id="yuText"><img src="img/yuText.png" alt="" ></div>
 		<div id="quan"><img src="img/quan.png" alt="" ></div>
 		<div id="butt">
-			click
+			ByFanYu
 		</div>
 	</div>	
+
 </body>
 </html>
 <script>
 	onload = show();
 	$("#butt").hover(function () {
-		$(this).css({"background":"yellow","color":"blueviolet"})
+		$(this).css({"background":"#fffef9","color":"#131124","border-radius":"20px"})
+		$("#quan").css({"top":"20px"})
 	},function () {
-		$(this).css({"background":"#47484c","color":"white"})
-	})
+		$(this).css({"background":"none","color":"white","border-radius":"0"})
+		$("#quan").css({"top":"-20px"})
+	})	
 	//动画效果
 	function show() {
 		$("#yuText").animate({
-			right:"150px",
-			top:"100px"
+			left:"70px",
+			top:"50px"
 		},1000);
-		
 	}
 
-	$(function(){
-		
+	$(function(){		
 	setTimeout(function () {
 		$("#quan").fadeIn();
 	},1000);
