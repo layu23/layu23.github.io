@@ -10,7 +10,7 @@
 
 </style>
 </head>
-<body>
+<body id="dy">
 	<div id="da">
 		<!-- <div id="title">ByFanYu</div> -->
 		<!-- <div id="yuText"><img src="img/yuText.png" alt="" ></div>
@@ -23,22 +23,30 @@
 </body>
 </html>
 <script>
-	onload = show();
 	$("#butt").hover(function () {
-		$(this).css({"background":"#fffef9","color":"#131124","border-radius":"20px"})
+		$(this).css({"background":"#fffef9","color":"#131124","border-radius":"20px","text-shadow":'none'})
 	},function () {
-		$(this).css({"background":"none","color":"white","border-radius":"0"})
+		$(this).css({"background":"none","color":"white","border-radius":"0","text-shadow":'2px 2px 2px rgb(194, 236, 4)'})
 	})	
 	//动画效果
-	function show() {
-		$("#butt").animate({
-			top:"40%"
-		},1000);
-	}
-
+	var arr = ['#131124','#64483d',"#fc8c23","#a61b29",'#2e317c'];
 	$(function(){		
 	setTimeout(function () {
 		$("#textYu").fadeIn();
-	},1000);
+
+		},1000);
+		$("#butt").animate({
+				top:"40%"
+		},1000);
+
 	});
+	var timer = setInterval(function(){
+　　　　cha();
+	},2000);
+		t
+	function cha() {
+		var ran = parseInt(Math.random()*5);
+		$("#dy").css("background",arr[ran])
+	}
+	
 </script>
