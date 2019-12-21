@@ -12,9 +12,29 @@ body{
 }
 #menu{
     float: left;
-    width: 10%;
+    width: 6%;
     height: 100%;
     border-right: 1px solid rgb(216, 225, 231);
+    font-size: 10px;
+    position: relative;
+}
+#menuText{
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+}
+#menuBut{
+    width: 24%;
+    height: 50%;
+    border: 1px solid;
+    position: absolute;
+    right: 10%;
+    top: 20%;   
 }
 #title{
     float: left;

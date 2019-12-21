@@ -11,23 +11,20 @@ body{
     border-radius: 100px;
     margin: 0 auto;
     position: relative;
-     top: 250px;
-}
-#textYu{
-    display: none;
+    top: 300px;
 }
 #butt{
-    width:270px;
+    width:200px;
     height: 70px;
     text-align: center;
     color: white;
+    right: 30px;
     text-shadow: 2px 2px 2px rgb(194, 236, 4);
     line-height: 70px;
-    position: absolute;
-    left: 23%;
-    top: 70%;
+    position: relative;
+    margin: 0 auto;
     cursor: pointer;
-    font-size: 40px;    
+    font-size: 30px;    
     font-weight: bolder;
     letter-spacing: 5px;
     font-style:italic;
@@ -35,6 +32,13 @@ body{
     -webkit-box-shadow:5px 2px 5px #c04851;
      box-shadow:5px 5px 5px #c04851;
 }
+#textYu{
+    height: 80%;
+    width: 80%;
+    display: none;
+    margin: 0 auto;
+}
+
 
 
 
