@@ -2,17 +2,39 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
     <title>For-Know/Home</title>
     <link rel="stylesheet" href="css\home.css">
     <style></style>
 </head>
 <body>
+    <!-- 头部分 -->
     <div id="banner">
         <div id="menu">
             <div id="menuText">MENU</div>
-            <div id="menuBut">=</div>
+            <div id="menuBut"></div>
         </div>
         <div id="title">For-Know</div>
+        <div id="worker">FanYu</div>
     </div>
+    <div id="top2"></div>
 </body>
 <ml>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+    //导航提示
+    $("#menuBut").hover(function () {
+        $(this).css("background-position","-0.12rem -0.28rem"); 
+    },function () {
+        $(this).css("background-position","-0.12rem 0");
+    })
+    //菜单出现隐藏
+    $("#menuBut").click(function (e) {
+        $("#top2").toggle();
+        e.stopPropagation();
+    })
+    //菜单隐藏
+    $(document).click(function () {
+        $("#top2").hide();
+    })
+</script>
