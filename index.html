@@ -2,52 +2,99 @@
 <html>
 <head>
 <meta charset="utf-for8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
 <title>For-know</title>
-<link rel="stylesheet" href="css/index.css">
 <script src="js/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="css\layui.css">
 <style>
-
+*{
+	padding: 0;
+	margin: 0;
+}
+html { font-size:100px; }
+@media(max-width:360px){ html { font-size:56.25px; } }
+body{
+	background-color: #131124;
+}
+#da{
+	margin: 0 auto;
+	width: 4.3rem;
+	height: 2.5rem;
+	position: relative;
+	top:3rem;
+}
+#text{
+	width: 4.3rem;
+	height: 1.5rem;
+	font-style: italic;
+	font-size: 1rem;
+	color: white;
+	display:none;
+	text-shadow:7px 2px 5px #fed71a;
+	-webkit-text-stroke: 1.4px #000000;
+}
+#cli{
+	width: 2.1rem;
+	height: 0.7rem;
+	border: 1px solid;
+	font-size: 0.5rem;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 0.7rem;
+	position: absolute;
+	left: 1.1rem;
+	background-color: #fed71a;
+	cursor: pointer;
+	-moz-box-shadow:0px 2px 5px #df0a0a; 
+	-webkit-box-shadow:0px 2px 5px #df0a0a; 
+	box-shadow:0px 2px 5px #df0a0a;
+	
+}
 </style>
 </head>
 <body id="dy">
 	<div id="da">
-		<div id="butt">
-			<div id="textYu">ByFanYu</div>
-		</div>
-	</div>	
-
+		<div id="text">ByFanYu</div>
+		<div id="cli">Enter</div>
+	</div>
 </body>
 </html>
 <script>
-	$("#butt").hover(function () {
-		$(this).css({"background":"#fffef9","color":"#131124","border-radius":"20px","text-shadow":'none'})
+	
+	
+	$("#cli").hover(function () {
+		$(this).css({"background":"#fed71a","color":'#131124',"border-radius":'10px','opacity':'0.8'})
 	},function () {
-		$(this).css({"background":"none","color":"white","border-radius":"0","text-shadow":'2px 2px 2px rgb(194, 236, 4)'})
+		$(this).css({"background":"#fed71a","color":"black","border-radius":'0px','opacity':'1'})
 	})	
 	//动画效果
-	var arr = ['#131124','#64483d',"#fc8c23","#a61b29",'#2e317c'];
-	$(function(){		
+	
+	$(function(){	
+		$("#cli").animate({top:'1.7rem'})
 	setTimeout(function () {
-		$("#textYu").fadeIn();
-
+		$("#text").fadeIn();
 		},1000);
-		$("#butt").animate({
-				top:"40%"
-		},1000);
-
 	});
+
+
+	var arr = ['#131124',"#fc8c23"];
 	var timer = setInterval(function(){
 　　　　cha();
 	},2000);
 	function cha() {
-		var ran = parseInt(Math.random()*5);
-		$("#dy").css("background",arr[ran])
+		var ran = parseInt(Math.random()*2);
+		$("#text").css("text-shadow",'7px 2px 5px '+arr[ran])
 	}
 
 	//跳转网页
 	$("#butt").click(function () {
 		location.href="home.html"
+	})
+
+	$(document).keydown(function (event) {
+		if(event.keyCode==13){
+			location.href="home.html"
+		}
 	})
 	
 </script>
