@@ -8,7 +8,7 @@
     <style></style>
 </head>
 <body>
-    <!-- 头部分 -->
+    <!-- 头1部分 -->
     <div id="banner">
         <div id="menu">
             <div id="menuText">MENU</div>
@@ -17,7 +17,16 @@
         <div id="title">For-Know</div>
         <div id="worker">FanYu</div>
     </div>
-    <div id="top2"></div>
+    <!-- 头2部分 -->
+    <div id="top2">
+        <ul id="t2_ul">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
 </body>
 <ml>
 <script src="js/jquery-3.4.1.min.js"></script>
@@ -30,6 +39,10 @@
     })
     //菜单出现隐藏
     $("#menuBut").click(function (e) {
+        $("#top2").toggle();
+        e.stopPropagation();
+    })
+    $("#menuText").click(function (e) {
         $("#top2").toggle();
         e.stopPropagation();
     })
