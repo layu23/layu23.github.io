@@ -6,7 +6,7 @@
 html { font-size:100px; }
 @media(max-width:360px){ html { font-size:56.25px; } }
 body{
-    background-color: #FFCED1;
+    background-color: #2C1C26;
 }
 #banner{
     width: 100%;
