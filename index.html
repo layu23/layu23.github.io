@@ -13,12 +13,20 @@
 }
 html { font-size:100px; }
 @media(max-width:360px){ html { font-size:56.25px; } }
-body{
-	background: url('https://i.loli.net/2019/12/24/zo1Txl9fJYwadj7.jpg') no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+.bg-res {
+		position: fixed;
+		top: 0;
+		left: 0;
+		min-height: 100%;
+		height: auto;
+		min-width: 1440px;
+		width: 100%;
+	}
+@media screen and (max-width: 1440px) {
+.bg-res {
+	left: 50%;
+	margin-left: -720px;
+}
 }
 #da{
 	margin: 0 auto;
@@ -59,6 +67,7 @@ body{
 </style>
 </head>
 <body id="dy">
+	<img src="https://i.loli.net/2019/12/24/zo1Txl9fJYwadj7.jpg" alt="" class="bg-res">
 	<div id="da">
 		<div id="text">ByFanYu</div>
 		<div id="cli">Enter</div>
