@@ -48,11 +48,11 @@ body{
 #title{
     float: left;
     width: 1.9rem;
-    font-size: 0.4rem;
+    font-size: 0.35rem;
     height: 0.48rem;    
     position: absolute;
     left: 1.2rem;
-    top: 0.06rem;
+    top: 0.10rem;
 }
 #worker{
     width: 1.3rem;

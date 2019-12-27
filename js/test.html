@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    #app{
+        font-size: 20px;
+        background-color:royalblue;
+        text-align: center;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+    <div id="app2">
+        <span v-bind:title="message">
+            鼠标悬停几秒钟查看此处绑定的提示信息
+        </span>
+    </div>
+    <div id="app3">
+        <span v-if='seen'>现在看不到我</span>
+    </div>
+    <div id="app4">
+        <ol>
+            <li v-for="todo in todos">
+                {{todo.text}}
+            </li>
+        </ol>
+    </div>
+    <div id="app5">
+        <p >{{message}}</p>
+        <button v-on:click="reverseMessage">反转消息</button>
+    </div>
+    <div id="app6">
+        <p>{{message}}</p>
+        <input type="text" name="" id="" v-model="message">
+    </div>
+</body>
+<ml>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data:{
+            message: 'hello Vue!'
+        }
+    })
+
+    var apps = new Vue({
+        el:"#app2",
+        data:{
+            message: '页面加载于' + new Date().toLocaleDateString()
+        }
+    })
+    var app3 = new Vue({
+        el: '#app3',
+        data:{
+            seen:false
+        }
+    })
+
+    var app4 = new Vue({
+        el: '#app4',
+        data: {
+            todos:[
+                {text: '叶流云'},
+                {text: '四顾🗡'},
+                {text: '苦荷'},
+                {text: '庆帝'}
+            ]
+        }
+    })
+
+    var app5 = new Vue({
+        el: '#app5',
+        data: {
+            message: '年年岁岁花相似，岁岁年年人不同'
+        },
+        methods: {
+            reverseMessage: function () {
+            this.message = this.message.split('，').reverse().join('，')
+            }
+        }
+})
+    var app6 = new Vue({
+        el: "#app6",
+        data: {
+            message: '圣诞快乐！'
+        }
+    })
+</script>
