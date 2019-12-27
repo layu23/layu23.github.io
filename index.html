@@ -11,11 +11,24 @@
 <body>
 	<div id="logo" style="text-align: center; ">For-Know</div>
 	<div id="go" style="font-family:'jdzhonyuanjian1ded35ab2920f98';" >就让我们，温柔的推翻这个世界吧</div>
+	<strong id="tip"></strong>
 </body>
 <ml>
 	<script src="js/jquery-3.4.1.min.js"></script>
 <script>
 	$(function () {
-		$("#logo").fadeIn(2000)
+		$("#logo").fadeIn(2000);
+		
 	})
+
+	//tip是提示信息，type:'success'是成功信息，'danger'是失败信息,'info'是普通信息,'warning'是警告信息
+	function showTip(tip, type) {
+		var $tip = $('#tip');
+		$tip.stop(true).prop('class', 'alert alert-' + type).text(tip).css('margin-left', - $tip.outerWidth() / 2).fadeIn(500).delay(2000).fadeOut(500);
+	}
+
+	setTimeout(showTip("页面正在拼命加载！",'success'),3000)
+	setTimeout(function (params) {
+		location.href='home.html'
+	},4000)
 </script>

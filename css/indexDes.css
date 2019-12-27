@@ -22,5 +22,13 @@ html { font-size:100px; }
 #go{
     display: none;
 }
-
+#tip {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    font-size: 30%;
+    display: none;
+    z-index: 9999;
+    color: red;
+}
 

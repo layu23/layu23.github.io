@@ -30,3 +30,12 @@ body{
     color: white;
     cursor: pointer;
 }
+#tip {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    font-size: 20%;
+    display: none;
+    z-index: 9999;
+    color: red;
+}
