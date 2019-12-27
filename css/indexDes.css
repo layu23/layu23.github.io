@@ -20,12 +20,7 @@ html { font-size:100px; }
     line-height: 1.5rem;
 }
 #go{
-    width: 7%;
-    text-align: center;
-    height: 1rem;
-    margin: -5% auto;
-    border-radius: 10%;
-    cursor: pointer;
+    display: none;
 }
 
 
