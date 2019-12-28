@@ -10,10 +10,15 @@
 </head>
 <body>
 	<div id="logo" style="text-align: center; " onclick="window.location.href='home.html'">For-Know</div>
-	<div id="go" style="font-family:'jdzhonyuanjian1ded35ab2920f98';" >就让我们，温柔的推翻这个世界吧</div>
+	<div id="go" style="font-family:'jdzhonyuanjian1ded35ab2920f98';" >
+		就让我们，温柔的推翻这个世界吧
+		<div id="sildeBottom2"></div>
+	</div>
+	<div id="sildeBottom"></div>
+	
 	<strong id="tip"></strong>
 	<div id="myMsg">
-		<div id="bod"><div id="headPhoto"></div></div>
+		<div id="headPhoto"></div>
 		<div id="resume">
 			目前用着<span>Vscode</span>做视图的
 			<br>
@@ -22,6 +27,7 @@
 			准备学更多前端框架的
 			<br>
 			一名刚起步的程序猿
+			<div id="name">-ByFanYu</div>
 		</div>
 	</div>
 </body>
@@ -33,15 +39,41 @@
 		$("#logo").fadeIn(2000);
 	})
 
+	var n = 0;
+	function a() {
+		if(n==0){
+			$("#sildeBottom").css({"opacity":'0.8','background-position':'0 40px'});
+			n+=1;
+		}else{
+			$("#sildeBottom").css({'background-position':'0 0',"opacity":'1'});
+			n-=1;
+		}
+	}
+	var m = 0;
+	function b() {
+		if(m==0){
+			$("#sildeBottom2").css({"opacity":'0.8','background-position':'0 20px'});
+			m+=1;
+		}else{
+			$("#sildeBottom2").css({'background-position':'0 0',"opacity":'1'});
+			m-=1;
+		}
+	}
+	var time = setInterval(a,1000)
+	var time2 = setInterval(b,1000)
 	//向上滑动个人信息显现
 	$(document).ready(function () {
 		var min_height = 100;
 		$(window).scroll(function () {
 			var s = $(window).scrollTop();
 			if(s>min_height){
-				$("#myMsg").fadeIn(800);
+				$("#myMsg").show();
+				$("#resume").animate({
+					left:'20%',
+				})
+				$("#headPhoto").fadeIn(1500);
 			}else{
-				$("#myMsg").fadeOut(800)
+				$("#myMsg").hide()
 			}
 		})
 	})
@@ -52,6 +84,6 @@
 		var $tip = $('#tip');
 		$tip.stop(true).prop('class', 'alert alert-' + type).text(tip).css('margin-left', - $tip.outerWidth() / 2).fadeIn(500).delay(2000).fadeOut(500);
 	}
-	setTimeout(showTip("点击文字进入！！！",'success'),3000)
+	setTimeout(showTip("点击文字进入!!!",'success'),3000)
 	
 </script>
