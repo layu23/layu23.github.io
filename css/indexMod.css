@@ -5,6 +5,7 @@ html { font-size:100px; }
 }
 body{
     background-color: #101F40;
+    height: 6rem;
 }
 #logo{
     display: none;
@@ -19,6 +20,7 @@ body{
     top: 30% ;
     text-shadow:2px -3px 5px #f5f107;
     color: white;
+    cursor: pointer;
 }
 #go{
     width: 100%;
@@ -38,4 +40,11 @@ body{
     display: none;
     z-index: 9999;
     color: red;
+}
+#myMsg{
+    width: 100%;
+    height: 1rem;
+    background: white;
+    position: fixed;
+    bottom: 0;display: none;
 }

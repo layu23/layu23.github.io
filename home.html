@@ -2,52 +2,28 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
-    <title>For-Know/Home</title>
-    <link rel="stylesheet" href="css\home.css">
-    <style></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <link media="(min-width:500px)"  rel="stylesheet" href="css/home.css">
+    <link media="(max-width:500px)" rel="stylesheet" href="css/homeMod.css">
 </head>
-<body>
-    <!-- 头1部分 -->
-    <div id="banner">
-        <div id="menu">
-            <div id="menuText">MENU</div>
-            <div id="menuBut"></div>
-        </div>
-        <div id="title">For-Know</div>
-        <div id="worker">FanYu</div>
-    </div>
-    <!-- 头2部分 -->
-    <div id="top2">
-        <ul id="t2_ul">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+<body style="height: 2000px">
+    <div id="div" style="background-color: purple;width: 200px;height:200px;display: none;position: fixed;left: 100px;bottom: 500px">
+        heheh
     </div>
 </body>
 <ml>
-<script src="js/jquery-3.4.1.min.js"></script>
+<script src=".//js/jquery-3.4.1.min.js"></script>
 <script>
-    //导航提示
-    $("#menuBut").hover(function () {
-        $(this).css("background-position","-0.12rem -0.28rem"); 
-    },function () {
-        $(this).css("background-position","-0.12rem 0");
-    })
-    //菜单出现隐藏
-    $("#menuBut").click(function (e) {
-        $("#top2").toggle();
-        e.stopPropagation();
-    })
-    $("#menuText").click(function (e) {
-        $("#top2").toggle();
-        e.stopPropagation();
-    })
-    //菜单隐藏
-    $(document).click(function () {
-        $("#top2").hide();
+    $(document).ready(function(){
+    var min_height = 100;
+    $(window).scroll(function(){
+    var s =$(window).scrollTop();
+    if(s > min_height){
+    $("#div").show()
+    }else{
+    $("#div").hide()
+    }
+    });
     })
 </script>

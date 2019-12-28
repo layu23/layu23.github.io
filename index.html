@@ -9,26 +9,38 @@
 	<link media="(max-width:500px)" rel="stylesheet" href="css/indexMod.css">
 </head>
 <body>
-	<div id="logo" style="text-align: center; ">For-Know</div>
+	<div id="logo" style="text-align: center; " onclick="window.location.href='home.html'">For-Know</div>
 	<div id="go" style="font-family:'jdzhonyuanjian1ded35ab2920f98';" >就让我们，温柔的推翻这个世界吧</div>
 	<strong id="tip"></strong>
+	<div id="myMsg"></div>
 </body>
 <ml>
 	<script src="js/jquery-3.4.1.min.js"></script>
 <script>
+	//区域淡入
 	$(function () {
 		$("#logo").fadeIn(2000);
-		
 	})
+
+	//向上滑动个人信息显现
+	$(document).ready(function () {
+		var min_height = 100;
+		$(window).scroll(function () {
+			var s = $(window).scrollTop();
+			if(s>min_height){
+				$("#myMsg").fadeIn(1000);
+			}else{
+				$("#myMsg").fadeOut(1000)
+			}
+		})
+	})
+
 
 	//tip是提示信息，type:'success'是成功信息，'danger'是失败信息,'info'是普通信息,'warning'是警告信息
 	function showTip(tip, type) {
 		var $tip = $('#tip');
 		$tip.stop(true).prop('class', 'alert alert-' + type).text(tip).css('margin-left', - $tip.outerWidth() / 2).fadeIn(500).delay(2000).fadeOut(500);
 	}
-
-	setTimeout(showTip("页面正在拼命加载！",'success'),3000)
-	setTimeout(function (params) {
-		location.href='home.html'
-	},4000)
+	setTimeout(showTip("点击文字进入！！！",'success'),3000)
+	
 </script>
