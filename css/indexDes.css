@@ -4,9 +4,9 @@ html { font-size:100px; }
     margin: 0;
 }
  body{
-        background: url("../img/word.jpg");
-        background-size: contain;
-        height: 800px;
+    background: url("../img/word.jpg");
+    background-size: contain;
+    height: 800px;
     }
 #logo{
     display: none;
@@ -34,9 +34,41 @@ html { font-size:100px; }
 }
 #myMsg{
     width: 100%;
-    height: 2rem;
+    height: 1000px;
     background: white;
     position: fixed;
     bottom: 0;display: none;
+    position: relative;
+}
+
+#headPhoto{
+    width: 320px;
+    height: 463px;
+    background: url('../img/psb.jpg');
+    background-size: contain;
+    position: absolute;
+    right: 25%;
+    top: 20%;
+    -moz-box-shadow:6px 6px 5px #333333; 
+    -webkit-box-shadow:6px 6px 5px #333333; 
+    box-shadow:6px 6px 5px #333333;
+
+}
+#resume{
+    width: 640px;
+    height: 469px;
+    position: absolute;
+    left: 25%;
+    top: 20%;
+    font-size: 40%;
+    line-height: 70px;
+    
+}
+#resume span{
+    color: thistle;
+    cursor: pointer;
+}
+#resume span:hover{
+    color: rgb(27, 28, 29);
 }
 

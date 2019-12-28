@@ -12,7 +12,18 @@
 	<div id="logo" style="text-align: center; " onclick="window.location.href='home.html'">For-Know</div>
 	<div id="go" style="font-family:'jdzhonyuanjian1ded35ab2920f98';" >就让我们，温柔的推翻这个世界吧</div>
 	<strong id="tip"></strong>
-	<div id="myMsg"></div>
+	<div id="myMsg">
+		<div id="bod"><div id="headPhoto"></div></div>
+		<div id="resume">
+			目前用着<span>Vscode</span>做视图的
+			<br>
+			用着<span>idea</span>做后台的
+			<br>
+			准备学更多前端框架的
+			<br>
+			一名刚起步的程序猿
+		</div>
+	</div>
 </body>
 <ml>
 	<script src="js/jquery-3.4.1.min.js"></script>
@@ -28,9 +39,9 @@
 		$(window).scroll(function () {
 			var s = $(window).scrollTop();
 			if(s>min_height){
-				$("#myMsg").fadeIn(1000);
+				$("#myMsg").fadeIn(800);
 			}else{
-				$("#myMsg").fadeOut(1000)
+				$("#myMsg").fadeOut(800)
 			}
 		})
 	})

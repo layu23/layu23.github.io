@@ -43,8 +43,39 @@ body{
 }
 #myMsg{
     width: 100%;
-    height: 1rem;
+    height: 1.5rem;
     background: white;
     position: fixed;
     bottom: 0;display: none;
+    position: relative;
+    font-size: 10%;
+}
+#resume{
+    width: 140px;
+    height: 100px;
+    border: 1px solid;
+    line-height: 20px;
+    position: absolute;
+    left: 20%;
+    top:10%
+}
+#headPhoto{
+    width: 80px;
+    height: 115px;
+    background: url('../img/psb.jpg');
+    background-size: contain;
+    position: absolute;
+    right: 20%;
+    top: 10%;
+    -moz-box-shadow:4px 4px 5px #333333; 
+    -webkit-box-shadow:4px 4px 5px #333333; 
+    box-shadow:4px 4px 5px #333333;
+
+}
+#resume span{
+    color: thistle;
+    cursor: pointer;
+}
+#resume span:hover{
+    color: rgb(27, 28, 29);
 }
