@@ -7,23 +7,30 @@
     <link media="(min-width:500px)"  rel="stylesheet" href="css/home.css">
     <link media="(max-width:500px)" rel="stylesheet" href="css/homeMod.css">
 </head>
-<body style="height: 2000px">
-    <div id="div" style="background-color: purple;width: 200px;height:200px;display: none;position: fixed;left: 100px;bottom: 500px">
-        heheh
-    </div>
+<body >
+    <header class="headroom" id="header">
+      <div id="logo" ></div>
+    </header>
+    
 </body>
-<ml>
+</html>
 <script src=".//js/jquery-3.4.1.min.js"></script>
+<script src="https://rawgithub.com/WickyNilliams/headroom.js/master/src/jQuery.headroom.js"></script>
+<script src="https://rawgithub.com/WickyNilliams/headroom.js/master/dist/headroom.js"></script>
 <script>
-    $(document).ready(function(){
-    var min_height = 100;
-    $(window).scroll(function(){
-    var s =$(window).scrollTop();
-    if(s > min_height){
-    $("#div").show()
-    }else{
-    $("#div").hide()
-    }
-    });
-    })
+    var top = document.querySelector("header")
+
+    var headroom = new Headroom(top, {
+  "tolerance": 5,
+  "offset": 205,
+  "classes": {
+    "initial": "animated",
+    "pinned": "slideDown",
+    "unpinned": "slideUp"
+  }
+});
+headroom.init();
+
+
+
 </script>

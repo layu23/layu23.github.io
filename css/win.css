@@ -1,0 +1,46 @@
+body{
+    background: url("../img/word.jpg");
+}
+#all{
+    margin: 200px auto;
+    width: 800px;
+    height: 300px;
+    position: relative;
+}
+#logo{      
+    width: 300px;
+    height: 180px;
+    background-image: url('../img/logoTree.jpg');
+    background-position: -100px -35px;
+    position: absolute;
+    left: 250px;
+    border-radius: 60px;
+    
+}
+#find{
+    width: 640px;
+    height: 40px;
+    border: 1px solid;
+    position: absolute;
+    left: 80px;
+    bottom: 10px;
+    border: 1px solid;
+}
+#thing{
+    width: 535px;
+    height: 35px;
+    float: left;
+    font-size: 18px;
+}
+#sub{
+    width: 100px;
+    height: 41px;
+    float: right;
+    background-color: #3388FF;
+    color: white;
+    font-size: 17px;
+}
+#sub:hover{
+    background-color: #0A67ED;
+    cursor: pointer;
+}

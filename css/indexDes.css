@@ -8,7 +8,7 @@ html { font-size:100px; }
     src: url('../font/BRUSHSCI.TTF');
 }
  body{
-    background: url("../img/word.jpg");
+    background-image: url('../img/word.jpg');
     background-size: contain;
     height: 800px;
     }

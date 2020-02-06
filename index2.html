@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<link href='http://cdn.repository.webfont.com/webfonts/nomal/135064/19673/5e062809f629d8013085a452.css' rel='stylesheet' type='text/css' />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>For-Know</title>
+	<link media="(min-width:500px)" rel="stylesheet" href="css/indexDes.css">
+	<link media="(max-width:500px)" rel="stylesheet" href="css/indexMod.css">
+</head>
+<body>
+	<div id="logo" style="text-align: center; " onclick="window.location.href='home.html'">For-Know</div>
+	<div id="go" style="font-family:'jdzhonyuanjian1ded35ab2920f98';" >
+		就让我们，温柔的推翻这个世界吧
+		=
+		<div id="sildeBottom2"></div>
+	</div>
+	<strong></strong>
+	<div id="sildeBottom"></div>
+	
+	<strong id="tip"></strong>
+	<div id="myMsg">
+		<div id="headPhoto"></div>
+		<div id="resume">
+			目前用着<span>Vscode</span>做视图的
+			<br>
+			用着<span>idea</span>做后台的
+			<br>
+			准备学更多前端框架的
+			<br>
+			一名刚起步的程序猿
+			<div id="name">-ByFanYu</div>
+		</div>
+	</div>
+</body>
+<ml>
+	<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+	//区域淡入
+	$(function () {
+		$("#logo").fadeIn(2000);
+	})
+
+	var n = 0;
+	function a() {
+		if(n==0){
+			$("#sildeBottom").css({"opacity":'0.8','background-position':'0 40px'});
+			n+=1;
+		}else{
+			$("#sildeBottom").css({'background-position':'0 0',"opacity":'1'});
+			n-=1;
+		}
+	}
+	var m = 0;
+	function b() {
+		if(m==0){
+			$("#sildeBottom2").css({"opacity":'0.8','background-position':'0 20px'});
+			m+=1;
+		}else{
+			$("#sildeBottom2").css({'background-position':'0 0',"opacity":'1'});
+			m-=1;
+		}
+	}
+	var time = setInterval(a,1000)
+	var time2 = setInterval(b,1000)
+	//向上滑动个人信息显现
+	$(document).ready(function () {
+		var min_height = 100;
+		$(window).scroll(function () {
+			var s = $(window).scrollTop();
+			if(s>min_height){
+				$("#myMsg").show();
+				$("#resume").animate({
+					left:'20%',
+				})
+				$("#headPhoto").fadeIn(1500);
+			}else{
+				$("#myMsg").hide()
+			}
+		})
+	})
+
+
+	//tip是提示信息，type:'success'是成功信息，'danger'是失败信息,'info'是普通信息,'warning'是警告信息
+	function showTip(tip, type) {
+		var $tip = $('#tip');
+		$tip.stop(true).prop('class', 'alert alert-' + type).text(tip).css('margin-left', - $tip.outerWidth() / 2).fadeIn(500).delay(2000).fadeOut(500);
+	}
+	setTimeout(showTip("点击文字进入!!!",'success'),3000)
+	
+</script>
