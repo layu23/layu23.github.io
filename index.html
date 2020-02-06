@@ -17,7 +17,7 @@
             <form action="https://www.baidu.com/s">
                 <input type="hidden" name="wd" id="trueThing">
                 <input type="text" id="thing" name="xy">
-                <input type="submit" value="百度两下" id="sub">
+                <input type="submit" value="百度两下" id="sub" onclick="sub()">
             </form>
         </div>
     </div>
@@ -28,6 +28,12 @@
             var num = parseInt(Math.random()*4);
             word.value = thing[num];
         }
+        function sub() {
+            var word = document.getElementById("trueThing");
+            var num = parseInt(Math.random()*4);
+            word.value = thing[num];
+        }
+       
     </script>
 </body>
 <ml>
