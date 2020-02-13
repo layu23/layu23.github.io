@@ -1,39 +1,49 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link media="(min-width:500px)" rel="stylesheet" href="../layu23.github.io/css/win.css">
-    <link media="(max-width:500px)" rel="stylesheet" href="../layu23.github.io/css/med.css">
-    <title>百度两下，你就知道</title>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>For-know</title>
     <style>
-        
+        .container{
+            
+            height: 200px;
+        }
+        .row{
+            height: 100%;
+            
+        }
+        .row>div{
+            height: 100%;
+            box-sizing: border-box;
+            border: 1px solid;
+            background-color: burlywood;
+        }
     </style>
-</head>
-<body>
-    <div id="all">
-        <div id="logo"></div>
-        <div id="find">
-            <form action="https://www.baidu.com/s">
-                <input type="hidden" name="wd" id="trueThing">
-                <input type="text" id="thing" name="xy">
-                <input type="submit" value="百度两下" id="sub" onclick="sub()">
-            </form>
+    <!-- Bootstrap -->
+    <link href="../layu23.github.io/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!-- [if lt IE 9]> -->
+      <script src="../layu23.github.io/lib/html5shiv.min.js"></script>
+      <script src="../layu23.github.io/lib/respond.min.js"></script>
+    <!-- <![endif] -->
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-3 "></div>
+            <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-3 "></div>
+            <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-3 "></div>
+            <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-3 "></div>
         </div>
     </div>
-    <script>
-        var thing = ["如何评价汤亮亮的后羿","美女图片","吉安好玩的地方","科比和汤亮亮单挑几几开"];
-        window.onload=function(){
-            var word = document.getElementById("trueThing");
-            var num = parseInt(Math.random()*4);
-            word.value = thing[num];
-        }
-        function sub() {
-            var word = document.getElementById("trueThing");
-            var num = parseInt(Math.random()*4);
-            word.value = thing[num];
-        }
-       
-    </script>
-</body>
-<ml>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../layu23.github.io/lib/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../layu23.github.io/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
