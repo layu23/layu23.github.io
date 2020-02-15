@@ -1,17 +1,56 @@
+.scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+    bottom: 15%;
+}
+
+.scroll li {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-image: url('../img/timg.png');
+    background-size: cover;
+}
+
+.carousel-indicators {
+    bottom: 15%;
+}
+
+.carousel-indicators li {
+    border: 1px solid #fff;
+    width: 40px;
+    height: 10px;
+}
+
+.carousel-indicators .active {
+    border: 1px solid #fff;
+    width: 40px;
+    height: 10px;
+}
+
+
+}
 .wjs_head {
     height: 50px;
     line-height: 50px;
     border: 1px solid #ccc;
 }
-
 .row {
     height: 100%;
 }
-
 .row>div:nth-of-type(-n+3) {
     border-right: 1px solid #ccc;
 }
-
 #jpg {
     border: 1px solid #ccc;
     display: none;
@@ -19,24 +58,19 @@
     position: absolute;
     top: 31px;
 }
-
 .row>div:nth-of-type(-n+1)>a {
     position: relative;
 }
-
 .row>div:nth-of-type(-n+1)>a:hover #jpg {
     display: block;
 }
-
 .wjs_head .container>.row>.col-md-3>.btn-danger {
     padding: 3px 15px;
 }
-
 .wjs_head .container>.row>.col-md-3>.btn-link {
     color: white;
     text-decoration: none;
 }
-
 .wjs_head .container>.row>.col-md-3>.btn-link:hover {
     color: #ccc;
 }
