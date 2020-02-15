@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>For-know</title>
+    <title>Bootstrap 101 Template</title>
     <style>
-        .container{
-            
-            height: 200px;
+        body {
+            background-image: url('img/word.jpg');
+            background-size: cover;
         }
-        .row{
-            height: 100%;
-            
+        
+        @media screen and (max-width: 768px) {
+            body {
+                background-image: url('img/slince.jpg');
+            }
         }
-        .row>div{
-            height: 100%;
-            box-sizing: border-box;
-            border: 1px solid;
-            background-color: burlywood;
+        
+        @media screen and (min-width: 768px) and (max-width:992px) {
+            body {
+                background-image: url('img/ipad.jpg');
+            }
         }
     </style>
     <!-- Bootstrap -->
@@ -28,22 +31,41 @@
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!-- [if lt IE 9]> -->
-      <script src="../layu23.github.io/lib/html5shiv.min.js"></script>
-      <script src="../layu23.github.io/lib/respond.min.js"></script>
-    <!-- <![endif] -->
-  </head>
-  <body>
-    <div class="container">
-        <div class="row">
-            <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-3 "></div>
-            <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-3 "></div>
-            <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-3 "></div>
-            <div class=" col-xs-12 col-sm-6 col-md-4 col-lg-3 "></div>
+    <script src="../layu23.github.io/lib/html5shiv.min.js"></script>
+    <script src="../layu23.github.io/lib/respond.min.js"></script>
+    <link rel="stylesheet" href="lib/base.css">
+</head>
+
+<body>
+    <div class=" wjs_head hidden-xs hidden-sm">
+        <div class=" container">
+            <div class=" row">
+                <div class=" col-md-2 ">
+                    <a href="">
+                        <span>手机微金所</span>
+                        <span class="glyphicon glyphicon-menu-down"></span>
+                        <img src="img/qq.jpg" alt="" id="jpg">
+                    </a>
+                </div>
+                <div class=" col-md-5 ">
+                    <span class="glyphicon glyphicon-earphone"></span>
+                    <a href="">联系客服</a>
+                </div>
+                <div class=" col-md-2 ">
+                    <a href="">常见问题</a>&nbsp;&nbsp;
+                    <a href="">财富登录</a>
+                </div>
+                <div class=" col-md-3 ">
+                    <button type="button" class="btn btn-danger">免费注册</button>
+                    <button type="button " class="btn btn-link ">登录</button>
+                </div>
+            </div>
         </div>
     </div>
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-    <script src="../layu23.github.io/lib/jquery.min.js"></script>
+    <script src="../layu23.github.io/lib/jquery.min.js "></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script src="../layu23.github.io/bootstrap/js/bootstrap.min.js"></script>
-  </body>
+    <script src="../layu23.github.io/bootstrap/js/bootstrap.min.js "></script>
+</body>
+
 </html>

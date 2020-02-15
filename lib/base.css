@@ -1,0 +1,42 @@
+.wjs_head {
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #ccc;
+}
+
+.row {
+    height: 100%;
+}
+
+.row>div:nth-of-type(-n+3) {
+    border-right: 1px solid #ccc;
+}
+
+#jpg {
+    border: 1px solid #ccc;
+    display: none;
+    border-top: none;
+    position: absolute;
+    top: 31px;
+}
+
+.row>div:nth-of-type(-n+1)>a {
+    position: relative;
+}
+
+.row>div:nth-of-type(-n+1)>a:hover #jpg {
+    display: block;
+}
+
+.wjs_head .container>.row>.col-md-3>.btn-danger {
+    padding: 3px 15px;
+}
+
+.wjs_head .container>.row>.col-md-3>.btn-link {
+    color: white;
+    text-decoration: none;
+}
+
+.wjs_head .container>.row>.col-md-3>.btn-link:hover {
+    color: #ccc;
+}
