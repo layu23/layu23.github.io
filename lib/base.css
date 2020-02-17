@@ -1,42 +1,29 @@
-.scroll {
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    z-index: 15;
-    width: 60%;
-    padding-left: 0;
-    margin-left: -30%;
-    text-align: center;
+* {
     list-style: none;
-    bottom: 15%;
+    padding: 0;
+    margin: 0;
 }
 
-.scroll li {
-    display: inline-block;
-    width: 65px;
-    height: 65px;
-    margin: 1px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-image: url('../img/timg.png');
-    background-size: cover;
+body {
+    background-color: #F8F2DC;
 }
 
 .carousel-indicators {
     bottom: 15%;
 }
 
-.carousel-indicators li {
+
+/* .carousel-indicators li {
     border: 1px solid #fff;
-    width: 40px;
+    width: 10px;
     height: 10px;
 }
 
 .carousel-indicators .active {
     border: 1px solid #fff;
-    width: 40px;
+    width: 10px;
     height: 10px;
-}
+} */
 
 .carousel-caption {
     bottom: 25%;
@@ -88,19 +75,86 @@
     color: rgb(163, 56, 56);
 }
 
+.navbar {
+    margin-bottom: 0px;
+}
+
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     background-color: transparent;
-    border-bottom: 3px solid red;
+    color: #F04A4C;
+}
+
+.navbar-default .navbar-nav>a,
+.navbar-default .navbar-nav>a:hover,
+.navbar-default .navbar-nav>a:focus {
+    background-color: transparent;
+    color: #F04A4C;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
 }
 
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
-    border-bottom: 3px solid red;
+    background-color: transparent;
+    color: #F04A4C;
+    border-bottom: 2px solid #F04A4C;
 }
 
-.navbar-brand>img {
-    position: relative;
-    top: -10px;
+.navbar-default {
+    background-color: #0D1740;
+    border-color: #16245C;
+    border-radius: 0;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+.carousel-caption {
+    font-size: 16px;
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+.row>div:nth-of-type(-n+3) {
+    border-right: 0;
+}
+
+.row>div>.thumbnail>.caption {
+    text-align: center;
+}
+
+.line {
+    margin: auto;
+    height: 2px;
+    width: 50px;
+    background-color: black;
+    margin-bottom: 20px;
+}
+
+.skills {
+    text-align: center;
+}
+
+.skills>li {
+    height: 150px;
+    border-radius: 100px;
+}
+
+.skills>li>div {
+    width: 70%;
+    height: 50%;
+    border: 1px dashed;
+    margin: auto;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 70px;
+    font-family: 'COCOGOOSE';
+    font-size: 16px;
 }
