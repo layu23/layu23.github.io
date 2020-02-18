@@ -67,7 +67,7 @@ body {
 }
 
 .wjs_head .container>.row>.col-md-3>.btn-link {
-    color: red;
+    color: #F04A4C;
     text-decoration: none;
 }
 
@@ -120,6 +120,7 @@ body {
 
 .jumbotron {
     background-color: white;
+    margin-bottom: 0;
 }
 
 .row>div:nth-of-type(-n+3) {
@@ -130,16 +131,26 @@ body {
     text-align: center;
 }
 
-.line {
+.caption>h3 {
+    margin-bottom: 30px;
+}
+
+.line,
+.line2 {
     margin: auto;
     height: 2px;
     width: 50px;
     background-color: black;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.line2 {
+    background-color: #fff;
 }
 
 .skills {
     text-align: center;
+    margin-top: 30px;
 }
 
 .skills>li {
@@ -148,7 +159,7 @@ body {
 }
 
 .skills>li>div {
-    width: 70%;
+    width: 60%;
     height: 50%;
     border: 1px dashed;
     margin: auto;
@@ -157,4 +168,54 @@ body {
     line-height: 70px;
     font-family: 'COCOGOOSE';
     font-size: 16px;
+}
+
+.skills>li>div:hover {
+    background-color: #F04A4C;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.showMe {
+    width: 100px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+}
+
+.showMe:hover {
+    background-color: #F8F2DC;
+    transition: 0.5s;
+}
+
+.contact {
+    background-color: #E9CFAE;
+}
+
+.end {
+    background-color: #0D1740;
+}
+
+.contact>.container>.row>div>.thumbnail,
+.contact>.container>.row>div>.thumbnail>.caption,
+.contact>.container>.row>div>.thumbnail>.caption>p {
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+}
+
+.end>.container>.row>div>.thumbnail,
+.end>.container>.row>div>.thumbnail>.caption,
+.end>.container>.row>div>.thumbnail>.caption>p {
+    background-color: transparent;
+    color: thistle;
+    border: none;
+}
+
+.contact>.container>.row>div>.thumbnail {
+    border: 1px solid rgb(240, 234, 234);
+}
+
+#twoCode {
+    border: 1px solid #E9CFAE;
+    margin-bottom: 20px;
 }
