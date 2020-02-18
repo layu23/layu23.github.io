@@ -34,20 +34,21 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-                <a class="navbar-brand" href="#"><img src=img\logoNew.png "" alt=""></a>
+                <a class="navbar-brand" href="#"><img src="../layu23.github.io/img/logoWeb.png" alt=""></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#" style="font-family:'COCOGOOSE';">For-Know <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">前端</a></li>
-                    <li><a href="#">后端</a></li>
-                    <li><a href="#">喜欢的</a></li>
+
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">关于我</a></li>
-
+                    <li><a href="#">学习</a></li>
+                    <li><a href="#">喜欢</a></li>
+                    <li><a href="#">简历</a></li>
+                    <li><a id="goAbout">关于</a></li>
+                    <li><a id="goContact">联系</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -75,7 +76,7 @@
             </div>
             <div class="item">
                 <a href="">
-                    <img src="../layu23.github.io//img/yhy.jpg" alt="...">
+                    <img src="../layu23.github.io/img/yhy.jpg" alt="...">
                 </a>
                 <div class="carousel-caption">
                     个人简介
@@ -94,7 +95,7 @@
         </a>
     </div>
     <!-- 关于我 -->
-    <div class="jumbotron">
+    <div class="jumbotron" id="about">
         <div class=" container con2">
             <div class="row">
                 <div class="col-sm-12 col-md-12">
@@ -137,8 +138,26 @@
             </div>
         </div>
     </div>
+    <!-- 喜欢的 -->
+    <div class="jumbotron" id="like">
+        <div class=" container con2">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h1>My likes</h1>
+                            <h3>喜欢的</h3>
+                            <hr class=" line">
+
+                            <button type="button" class="btn  showMe">MORE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 联系我 -->
-    <div class="jumbotron contact">
+    <div class="jumbotron contact" id="contact">
         <div class=" container con2">
             <div class="row">
                 <div class="col-sm-12 col-md-12">
@@ -164,9 +183,15 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12">
                     <div class="thumbnail">
-                        <div class="caption">
+                        <div class="caption endList">
                             <img src="../layu23.github.io/img/logoMd.png" alt="logo">
                             <h3>THANKS</h3>
+                            <p>
+                                <a href="">首页</a>&nbsp;&nbsp;
+                                <a href="">简历</a>&nbsp;&nbsp;
+                                <a href="">喜欢</a>&nbsp;&nbsp;
+                                <a href="">关于</a>&nbsp;&nbsp;
+                            </p>
                         </div>
 
                     </div>
@@ -174,7 +199,8 @@
             </div>
         </div>
     </div>
-
+    <!-- 回顶部 -->
+    <!-- <a class="goTop" href=""></a> -->
 
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
@@ -182,6 +208,29 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="../layu23.github.io//bootstrap/js/bootstrap.min.js "></script>
     <script>
+        $(document).ready(function() {
+            $("#goAbout").click(function() {
+                $("html, body").animate({
+                    scrollTop: $("#about").offset().top
+                }, {
+                    duration: 500,
+                    easing: "swing"
+                });
+                return false;
+            });
+            $("#goContact").click(function() {
+                $("html, body").animate({
+                    scrollTop: $("#contact").offset().top
+                }, {
+                    duration: 500,
+                    easing: "swing"
+                });
+                return false;
+            });
+
+
+        });
+
         //技能信息
         $(".skills>li>div").mouseenter(function() {
             var skillsNum = $(this).data("skillsNum");
