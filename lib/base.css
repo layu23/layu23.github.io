@@ -95,6 +95,7 @@ body {
 
 .navbar-default .navbar-nav>li>a {
     color: white;
+    border-bottom: 2px solid #0D1740;
 }
 
 .navbar-default .navbar-nav>li>a:hover,
