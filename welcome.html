@@ -93,10 +93,63 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+    <div style="width: 500px; height: 500px; border: 1px solid; margin-top: 500px;">
+        <picture>
+            <source data-srcset="../layu23.github.io/img/word.jpg">
+            <img data-src="../layu23.github.io/img/word.jpg" src="about:blank" alt="">
+        </picture>
+    </div>
+    <div style="width: 500px; height: 500px; border: 1px solid; margin-top: 500px;">
+        <picture>
+            <source data-srcset="../layu23.github.io/img/yz.jpg">
+            <img data-src="../layu23.github.io/img/yz.jpg" src="about:blank" alt="">
+        </picture>
+    </div>
+
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="../layu23.github.io/lib/jquery.min.js "></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="../layu23.github.io/bootstrap/js/bootstrap.min.js "></script>
+    <script>
+        function showImage(leftSpace = 500) {
+            var scrollTop = $window.scrollTop();
+            var $containers = this.$imgContainers;
+            for (var i = 0; i < $containers.length; i++) {
+                //如果快要滑到图片位置
+                var $container = $containers.eq(i);
+                if ($container.offset().top - scrollPosition < leftSpace) {
+                    this.ensureImgSrc($container);
+                }
+            }
+        };
+
+        function ensureImgSrc($container) {
+            var $source = $container.find("source");
+            if ($source.length && !$source.attr("srcset")) {
+                $source.attr("srcset", $source.data("srcset"));
+            }
+            var $img = $container.find("img:not(.loading)");
+            if ($img.length && $img.attr("src").indexOf("//") < 0) {
+                $img.attr("src", $img.data("src"));
+                this.shownCount++;
+            }
+        };
+
+        function init() {
+            //初始化
+            var leftSpace = 0;
+            this.showImage(leftSpace);
+            //滑动
+            $window.on("scroll", this, this.throttleShow);
+        }
+
+        function ensureImgSrc($container) {
+            //如果全部显示，off掉window.scroll    
+            if (this.shownCount >= this.allCount) {
+                $window.off("scroll", this.throttleShow);
+            }
+        }
+    </script>
 </body>
 
 </html>

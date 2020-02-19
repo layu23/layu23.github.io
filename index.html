@@ -17,7 +17,6 @@
     <script src="../layu23.github.io/lib/html5shiv.min.js"></script>
     <script src="../layu23.github.io/lib/respond.min.js"></script>
     <link rel="stylesheet" href="../layu23.github.io/lib/base.css">
-    <link href='http://cdn.repository.webfont.com/webfonts/nomal/135839/47031/5e4a99def629d81044e83263.css' rel='stylesheet' type='text/css' />
     <link rel="icon" href="../layu23.github.io/img/webLogo.ico">
     <!-- <![endif] -->
 </head>
@@ -40,7 +39,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#" style="font-family:'COCOGOOSE';">For-Know <span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="#" style="font-weight: bold;font-size: 18px;">For-Know <span class="sr-only">(current)</span></a></li>
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -61,14 +60,13 @@
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <a href="#">
-                    <img src="../layu23.github.io/img/wuli_iu.jpg" alt="...">
+                    <img src="../layu23.github.io/img/iu.jpg" alt="iu">
                 </a>
                 <div class="carousel-caption">
                     一些分享
@@ -76,7 +74,7 @@
             </div>
             <div class="item">
                 <a href="">
-                    <img src="../layu23.github.io/img/yhy.jpg" alt="...">
+                    <img src="../layu23.github.io/img/one.jpg" alt="...">
                 </a>
                 <div class="carousel-caption">
                     个人简介
@@ -166,7 +164,7 @@
                             <h1>Contact Me</h1>
                             <h3>联系我</h3>
                             <hr class=" line2">
-                            <p>那时我们有梦，如今深夜饮酒<br>被子碰到一起那是梦碎的声音</p>
+                            <p>那时我们有梦，如今深夜饮酒<br>杯子碰到一起那是梦碎的声音</p>
                             <h4>虞帆</h4>
                             <img src="../layu23.github.io/img/twoCode.jpg" alt="我滴微信" id="twoCode"><br>
                             <button class="btn btn-default btn-success" type="submit">微信/QQ</button>
@@ -200,7 +198,7 @@
         </div>
     </div>
     <!-- 回顶部 -->
-    <!-- <a class="goTop" href=""></a> -->
+    <a class="goTop" href=""></a>
 
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
@@ -208,6 +206,7 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="../layu23.github.io//bootstrap/js/bootstrap.min.js "></script>
     <script>
+        //跳转效果
         $(document).ready(function() {
             $("#goAbout").click(function() {
                 $("html, body").animate({
@@ -236,7 +235,15 @@
                 });
                 return false;
             });
-
+            $(".goTop").click(function() {
+                $("html, body").animate({
+                    scrollTop: $("body").offset().top
+                }, {
+                    duration: 500,
+                    easing: "swing"
+                });
+                return false;
+            })
 
         });
 
