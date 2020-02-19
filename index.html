@@ -46,7 +46,7 @@
                     <li><a href="#">学习</a></li>
                     <li><a id="goLike">喜欢</a></li>
                     <li><a href="#">简历</a></li>
-                    <li><a id="goAbout">关于</a></li>
+                    <li><a class="goAbout">关于</a></li>
                     <li><a id="goContact">联系</a></li>
                 </ul>
             </div>
@@ -66,7 +66,7 @@
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <a href="#">
-                    <img src="../layu23.github.io/img/iu.jpg" alt="iu">
+                    <img src="../layu23.github.io/img/iu_min.jpg" alt="iu">
                 </a>
                 <div class="carousel-caption">
                     一些分享
@@ -74,7 +74,7 @@
             </div>
             <div class="item">
                 <a href="">
-                    <img src="../layu23.github.io/img/one.jpg" alt="...">
+                    <img src="../layu23.github.io/img/one_min.jpg" alt="...">
                 </a>
                 <div class="carousel-caption">
                     个人简介
@@ -160,14 +160,30 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12">
                     <div class="thumbnail">
-                        <div class="caption">
+                        <div class="caption" style="position: relative;">
                             <h1>Contact Me</h1>
                             <h3>联系我</h3>
                             <hr class=" line2">
                             <p>那时我们有梦，如今深夜饮酒<br>杯子碰到一起那是梦碎的声音</p>
                             <h4>虞帆</h4>
-                            <img src="../layu23.github.io/img/twoCode.jpg" alt="我滴微信" id="twoCode"><br>
+                            <img src="../layu23.github.io/img/twoCode_min.jpg" alt="我滴微信" id="twoCode"><br>
+                            <img src="../layu23.github.io/img/qqCode_min.jpg" alt="我滴微信" id="qqCode" hidden><br>
                             <button class="btn btn-default btn-success" type="submit">微信/QQ</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- logo -->
+    <div class="jumbotron logo">
+        <div class=" container con2">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <img src="../layu23.github.io/img/logoMd.png" alt="logo">
                         </div>
 
                     </div>
@@ -182,14 +198,13 @@
                 <div class="col-sm-12 col-md-12">
                     <div class="thumbnail">
                         <div class="caption endList">
-                            <img src="../layu23.github.io/img/logoMd.png" alt="logo">
-                            <h3>THANKS</h3>
                             <p>
                                 <a href="">首页</a>&nbsp;&nbsp;
                                 <a href="">简历</a>&nbsp;&nbsp;
                                 <a href="">喜欢</a>&nbsp;&nbsp;
-                                <a href="">关于</a>&nbsp;&nbsp;
+                                <a class="goAbout">关于</a>&nbsp;&nbsp;
                             </p>
+                            <h3>THANKS</h3>
                         </div>
 
                     </div>
@@ -208,7 +223,7 @@
     <script>
         //跳转效果
         $(document).ready(function() {
-            $("#goAbout").click(function() {
+            $(".goAbout").click(function() {
                 $("html, body").animate({
                     scrollTop: $("#about").offset().top
                 }, {
@@ -269,10 +284,12 @@
         var flagImg = true;
         $(".btn-success").click(function() {
             if (flagImg) {
-                $("#twoCode").attr("src", "../layu23.github.io/img/qqCode.jpg");
+                $("#twoCode").attr("hidden", true);
+                $("#qqCode").removeAttr("hidden");
                 flagImg = false;
             } else {
-                $("#twoCode").attr("src", "../layu23.github.io/img/twoCode.jpg");
+                $("#qqCode").attr("hidden", true);
+                $("#twoCode").removeAttr('hidden');
                 flagImg = true;
             }
         })
