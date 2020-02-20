@@ -9,7 +9,7 @@
     <title>ByFanYu</title>
 
     <!-- Bootstrap -->
-    <link href="../layu23.github.io//bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../layu23.github.io//bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -22,6 +22,7 @@
 </head>
 
 <body>
+    <div id="loading"><img src="../layu23.github.io/img/loading.gif" alt=""></div>
     <!-- 导航栏 -->
     <nav class="navbar navbar-default ">
         <div class="container-fluid">
@@ -146,12 +147,12 @@
                             <h1>My likes</h1>
                             <h3>喜欢的</h3>
                             <hr class=" line">
-                            <div class="row">
-                                <div class=" col-xs-6 col-md-3">1</div>
-                                <div class=" col-xs-6 col-md-3">2</div>
-                                <div class=" col-xs-6 col-md-3">3</div>
-                                <div class=" col-xs-6 col-md-3">4</div>
-                            </div>
+                            <ul class="row hobby">
+                                <li class=" col-xs-6 col-md-3">1</li>
+                                <li class=" col-xs-6 col-md-3">2</li>
+                                <li class=" col-xs-6 col-md-3">3</li>
+                                <li class=" col-xs-6 col-md-3">4</li>
+                            </ul>
                             <button type="button" class="btn  showMore">MORE</button>
                         </div>
                     </div>
@@ -225,88 +226,7 @@
     <script src=" ../layu23.github.io//lib/jquery.min.js "></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="../layu23.github.io//bootstrap/js/bootstrap.min.js "></script>
-    <script>
-        //跳转效果
-        $(document).ready(function() {
-            $(".goAbout").click(function() {
-                $("html, body").animate({
-                    scrollTop: $("#about").offset().top
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                });
-                return false;
-            });
-            $("#goContact").click(function() {
-                $("html, body").animate({
-                    scrollTop: $("#contact").offset().top
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                });
-                return false;
-            });
-            $("#goLike").click(function() {
-                $("html, body").animate({
-                    scrollTop: $("#like").offset().top
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                });
-                return false;
-            });
-            $(".goTop").click(function() {
-                $("html, body").animate({
-                    scrollTop: $("body").offset().top
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                });
-                return false;
-            })
-
-        });
-
-        //技能信息
-        $(".skills>li>div").mouseenter(function() {
-            var skillsNum = $(this).data("skillsNum");
-            $(this).html(skillsNum);
-        })
-        $(".skills>li>div").mouseleave(function() {
-            var skillsName = $(this).data("skillsName");
-            $(this).html(skillsName);
-        });
-
-        //喜欢按钮特效
-        $(".showMore").hover(function() {
-            $(this).html("<span class='glyphicon glyphicon-eye-open'></span>");
-        });
-        $(".showMore").mouseleave(function() {
-            $(this).html("MORE");
-        });
-
-        //简历按钮特效
-        $(".showMe").hover(function() {
-            $(this).html("<span class='glyphicon glyphicon-eye-open'></span>");
-        });
-        $(".showMe").mouseleave(function() {
-            $(this).html("我的简历");
-        });
-
-        //切换二维码
-        var flagImg = true;
-        $(".btn-success").click(function() {
-            if (flagImg) {
-                $("#twoCode").attr("hidden", true);
-                $("#qqCode").removeAttr("hidden");
-                flagImg = false;
-            } else {
-                $("#qqCode").attr("hidden", true);
-                $("#twoCode").removeAttr('hidden');
-                flagImg = true;
-            }
-        })
-    </script>
+    <script src="../layu23.github.io/lib/yu.js"></script>
 </body>
 
 </html>
