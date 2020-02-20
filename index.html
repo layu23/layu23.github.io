@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>ByFanYu</title>
-
+    <script src=" ../layu23.github.io//lib/jquery.min.js "></script>
     <!-- Bootstrap -->
     <link href="../layu23.github.io//bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,7 +23,7 @@
 
 <body>
     <!-- 加载页面 -->
-    <div id="loading"><img src="../layu23.github.io/img/loading.gif" alt=""></div>
+    <div id="loading"><img  alt="" src="../layu23.github.io/img/loading.gif"></div>
     <!-- 导航栏 -->
     <nav class="navbar navbar-default ">
         <div class="container-fluid">
@@ -152,25 +152,25 @@
                                 <li class=" col-xs-6 col-md-3">
                                     <a >
                                         <div class="hobby-list-title"><p>kobe</p></div>
-                                        <img src="http://pic.yupoo.com/fanyu24/a1bcca8c/5a4def37.jpg" alt="">
+                                        <img src="default.jpg" data-src="http://pic.yupoo.com/fanyu24/a1bcca8c/5a4def37.jpg" alt="">
                                     </a>
                                 </li>
                                 <li class=" col-xs-6 col-md-3">
                                     <a >
                                         <div class="hobby-list-title"><p>想见你</p></div>
-                                        <img src="http://pic.yupoo.com/fanyu24/e686da99/b45dce45.jpg" alt="">
+                                        <img src="default.jpg" data-src="http://pic.yupoo.com/fanyu24/e686da99/b45dce45.jpg" alt="">
                                     </a>
                                 </li>
                                 <li class=" col-xs-6 col-md-3">
                                     <a >
                                         <div class="hobby-list-title"><p>iu</p></div>
-                                        <img src="http://pic.yupoo.com/fanyu24/5520e4c7/ecab72ef.jpg" alt="">
+                                        <img src="default.jpg" data-src="http://pic.yupoo.com/fanyu24/5520e4c7/ecab72ef.jpg" alt="">
                                     </a>
                                 </li>
                                 <li class=" col-xs-6 col-md-3">
                                     <a >
                                         <div class="hobby-list-title"><p>rip</p></div>
-                                        <img src="http://pic.yupoo.com/fanyu24/a1bcca8c/5a4def37.jpg" alt="">
+                                        <img src="default.jpg" data-src="http://pic.yupoo.com/fanyu24/a1bcca8c/5a4def37.jpg" alt="">
                                     </a>
                                 </li>
                             </ul>
@@ -193,8 +193,8 @@
                             <hr class=" line">
                             <p>那时我们有梦，如今深夜饮酒<br>杯子碰到一起那是梦碎的声音</p>
                             <h4>虞帆</h4>
-                            <img src="http://pic.yupoo.com/fanyu24/47304d1d/e19ad97b.jpg" alt="我滴微信" id="twoCode"><br>
-                            <img src="http://pic.yupoo.com/fanyu24/d578056b/8d6781ba.jpg" alt="我滴微信" id="qqCode" hidden><br>
+                            <img src="default.jpg" data-src="http://pic.yupoo.com/fanyu24/47304d1d/e19ad97b.jpg" alt="我滴微信" id="twoCode"><br>
+                            <img src="http://pic.yupoo.com/fanyu24/d578056b/8d6781ba.jpg" alt="我滴QQ" id="qqCode" hidden><br>
                             <button class="btn btn-default btn-success" type="submit">微信/QQ</button>
                         </div>
 
@@ -244,9 +244,34 @@
 
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-    <script src=" ../layu23.github.io//lib/jquery.min.js "></script>
+    
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="../layu23.github.io//bootstrap/js/bootstrap.min.js "></script>
+    
+    <script>
+        var num = document.getElementsByTagName('img').length;
+        var img = document.getElementsByTagName("img");
+        // 存储图片加载到的位置，避免每次都从第一张图片开始遍历
+        var n = 0;
+        // 页面载入完毕加载可视区域内的图片
+        lazyload();                                
+        window.onscroll = lazyload;
+        // 监听页面滚动事件
+        function lazyload() {
+            // 可见区域高度
+            var seeHeight = document.documentElement.clientHeight;
+            // 滚动条距离顶部高度
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            for (var i = n; i < num; i++) {
+                if (img[i].offsetTop < seeHeight + scrollTop) {
+                    if (img[i].getAttribute("src") == "default.jpg") {
+                        img[i].src = img[i].getAttribute("data-src");
+                    }
+                    n = i + 1;
+                }
+            }
+        }
+    </script>
     <script src="../layu23.github.io/lib/yu.js"></script>
 </body>
 
