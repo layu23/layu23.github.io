@@ -4,7 +4,7 @@
      margin: 0;
      text-decoration: none;
  }
- 
+ body{background-color: #F5F5F5;}
  #loading {
      position: fixed;
      width: 100px;
@@ -260,6 +260,10 @@
  .endList>h3 {
      color: #9DC6EA
  }
+ 
+.want-see-you{height: 900px;background-color: #fff}
+
+
  
  .goTop {
      display: block;
