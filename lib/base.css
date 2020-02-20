@@ -125,6 +125,12 @@
             cursor: pointer;
         }
         
+        .showMore {
+            width: 100px;
+            background-color: transparent;
+            border: 1px solid #ccc;
+        }
+        
         .showMe {
             width: 100px;
             background-color: transparent;
@@ -208,7 +214,7 @@
             height: 50px;
             bottom: 20px;
             right: 18px;
-            background-image: url('../img/timg_min.png');
+            background-image: url('http://pic.yupoo.com/fanyu24/593027df/934a4c47.png');
             background-size: cover;
             border: 2px solid #2B70AF;
         }
