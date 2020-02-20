@@ -1,7 +1,8 @@
  * {
      list-style: none;
      padding: 0;
-     margin: 0
+     margin: 0;
+     text-decoration: none;
  }
  
  #loading {
@@ -12,6 +13,7 @@
      margin-left: -50px;
      top: 50%;
      margin-top: -50px;
+     z-index: 999;
  }
  /* 导航条 */
  
@@ -118,12 +120,12 @@
  
  .skills>li>div {
      width: 60%;
-     height: 50%;
+     height: 60%;
      border: 1px dashed;
      margin: auto;
-     border-radius: 50px;
+     border-radius: 50%;
      text-align: center;
-     line-height: 70px;
+     line-height: 90px;
      font-family: 'COCOGOOSE';
      font-size: 16px;
      font-weight: bolder
@@ -132,24 +134,67 @@
  .skills>li>div:hover {
      background-color: #F04A4C;
      border: 1px solid #fff;
-     cursor: pointer
+     cursor: pointer;
+     -moz-box-shadow:0px 2px 5px #333333;
+     -webkit-box-shadow:0px 2px 5px #333333;
+        box-shadow:0px 2px 5px #333333;
+     transition: all 0.5s
  }
- 
+ .showMe,
  .showMore {
      width: 100px;
      background-color: transparent;
-     border: 1px solid #ccc
+     border: 1px solid black
  }
- 
- .showMe:hover {
-     background-color: #F8F2DC;
+  .showMe:hover,
+.showMore:hover {
+     background-color: #F04A4C;
+     -moz-box-shadow:2px 2px 5px #333333;
+     -webkit-box-shadow:2px 2px 5px #333333;
+    box-shadow:2px 2px 5px #333333;
      transition: 0.5s
  }
- 
- .hobby>li {
-     height: 100px;
-     border: 1px solid;
- }
+
+ .hobby>li{
+     overflow: hidden;
+     padding-right: 0;
+     padding-left: 0;
+    cursor: pointer;
+    }
+
+ .hobby-list-title{
+    z-index: 1;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top:50%; 
+    left:50%;
+    border-radius: 50%;
+    background: rgba(0,0,0,.7);
+    transition: all .3s ease-in;    
+}
+.hobby-list-title>p{
+    text-align: center;
+    margin-top: 75%;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bolder;
+    display: none;
+    transition: 1s;
+}
+.hobby>li:hover .hobby-list-title{
+    top: -50%;left: -50%; 
+    width: 200%; height: 200%;
+}
+.hobby>li:hover p{
+    display: block;
+}
+
+.hobby img{transition: 1s;}
+.hobby>li:hover img{
+    transform: scale(2.5);
+}
+
  
  .contact {
      background-color: #E9CFAE
