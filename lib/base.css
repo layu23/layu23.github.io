@@ -17,7 +17,7 @@
      z-index: 999;
  }
  /* 导航条 */
- 
+
  .navbar-brand {
      padding: 10px 15px
  }
@@ -35,6 +35,7 @@
  .navbar-default .navbar-nav>.active>a,
  .navbar-default .navbar-nav>.active>a:hover,
  .navbar-default .navbar-nav>.active>a:focus {
+    font-weight: bold;font-size: 18px;
      background-color: transparent;
      color: #F04A4C
  }
@@ -145,16 +146,15 @@
  .showMore {
      width: 100px;
      background-color: transparent;
-     border: 1px solid black
+     border: 1px solid #000
  }
   .showMe:hover,
 .showMore:hover {
      background-color: #F04A4C;
-     -moz-box-shadow:2px 2px 5px #333333;
-     -webkit-box-shadow:2px 2px 5px #333333;
-    box-shadow:2px 2px 5px #333333;
+    border: 1px solid #fff;
      transition: 0.5s
  }
+ .glyphicon-user{color: #fff;}
 
  .hobby>li{
      overflow: hidden;
@@ -252,17 +252,76 @@
      font-size: 20px;
      cursor: pointer
  }
- 
  .endList>p>a:hover {
      text-decoration: none;
      color: #fff
  }
- 
  .endList>h3 {
      color: #9DC6EA
  }
- 
+ /* 喜欢页面 */
 .want-see-you{height: 900px;background-color: #fff}
+/* 分享页面 */
+.share-something{height: 1000px;background-color: #fff}
+.share::before{content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    position: absolute;
+    right: -10px;
+    bottom: -25px;
+}
+.share-line{width: 1px;
+    height: 280px;
+    border-left: 1px dashed #E9CFAE;
+    position: absolute;
+    top: 10px;
+    left: 55px;
+}
+.share-menu{border-bottom: none;}
+.share-content{
+    margin-top: 10px;
+
+}
+.share-content>div>img{width: 100%;height: 100%;}
+.share-content>div>p{
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+    font-weight: 300;
+}
+.share-menu>li>a{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px;
+    line-height: 40px;
+    background-color: #E9CFAE;
+    color: #fff
+}
+.share-menu>li>a:hover{
+    border: none;
+    background-color: #A39F93
+}
+.share-menu>li.active>a,
+ .share-menu>li.active>a:focus,
+  .share-menu>li.active>a:hover{
+      border: none;
+      background-color: #A39F93;
+      color: #fff;
+  }
 
 
- 
+ .goTop {
+     position: fixed;
+     width: 50px;
+     height: 50px;
+     bottom: 20px;
+     right: 18px;
+     cursor: pointer;
+     background-image: url('http://pic.yupoo.com/fanyu24/593027df/934a4c47.png');
+     background-size: cover;
+     border: 2px solid #2B70AF
+ }
