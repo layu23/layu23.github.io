@@ -131,7 +131,7 @@
                                     java
                                 </li>
                             </ul>
-                            <button type="button" class="btn  showMe">我的简历</button>
+                            <button type="button" class="btn  showMe" onclick="javascript:window.location='test.html'">我的简历</button>
                         </div>
                     </div>
                 </div>
@@ -152,25 +152,25 @@
                                 <li class=" col-xs-6 col-md-3">
                                     <a >
                                         <div class="hobby-list-title"><p>kobe</p></div>
-                                        <img src="default.jpg" data-src="http://pic.yupoo.com/fanyu24/a1bcca8c/5a4def37.jpg" alt="">
+                                        <img src="img/default.jpg" data-src="http://pic.yupoo.com/fanyu24/a1bcca8c/5a4def37.jpg" alt="">
                                     </a>
                                 </li>
                                 <li class=" col-xs-6 col-md-3">
                                     <a >
                                         <div class="hobby-list-title"><p>想见你</p></div>
-                                        <img src="default.jpg" data-src="http://pic.yupoo.com/fanyu24/e686da99/b45dce45.jpg" alt="">
+                                        <img src="img/default.jpg" data-src="http://pic.yupoo.com/fanyu24/e686da99/b45dce45.jpg" alt="">
                                     </a>
                                 </li>
                                 <li class=" col-xs-6 col-md-3">
                                     <a >
                                         <div class="hobby-list-title"><p>iu</p></div>
-                                        <img src="default.jpg" data-src="http://pic.yupoo.com/fanyu24/5520e4c7/ecab72ef.jpg" alt="">
+                                        <img src="img/default.jpg" data-src="http://pic.yupoo.com/fanyu24/5520e4c7/ecab72ef.jpg" alt="">
                                     </a>
                                 </li>
                                 <li class=" col-xs-6 col-md-3">
                                     <a >
                                         <div class="hobby-list-title"><p>rip</p></div>
-                                        <img src="default.jpg" data-src="http://pic.yupoo.com/fanyu24/a1bcca8c/5a4def37.jpg" alt="">
+                                        <img src="img/default.jpg" data-src="http://pic.yupoo.com/fanyu24/a1bcca8c/5a4def37.jpg" alt="">
                                     </a>
                                 </li>
                             </ul>
@@ -193,9 +193,9 @@
                             <hr class=" line">
                             <p>那时我们有梦，如今深夜饮酒<br>杯子碰到一起那是梦碎的声音</p>
                             <h4>虞帆</h4>
-                            <img src="default.jpg" data-src="http://pic.yupoo.com/fanyu24/47304d1d/e19ad97b.jpg" alt="我滴微信" id="twoCode"><br>
+                            <img src="img/default.jpg" data-src="http://pic.yupoo.com/fanyu24/47304d1d/e19ad97b.jpg" alt="我滴微信" id="twoCode"><br>
                             <img src="http://pic.yupoo.com/fanyu24/d578056b/8d6781ba.jpg" alt="我滴QQ" id="qqCode" hidden><br>
-                            <button class="btn btn-default btn-success" type="submit">微信/QQ</button>
+                            <button class="btn btn-default btn-danger change" >微信/QQ</button>
                         </div>
 
                     </div>
@@ -240,7 +240,6 @@
         </div>
     </div>
     <!-- 回顶部 -->
-    <a class="goTop" href=""></a>
 
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
@@ -264,7 +263,7 @@
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             for (var i = n; i < num; i++) {
                 if (img[i].offsetTop < seeHeight + scrollTop) {
-                    if (img[i].getAttribute("src") == "default.jpg") {
+                    if (img[i].getAttribute("src") == "img/default.jpg") {
                         img[i].src = img[i].getAttribute("data-src");
                     }
                     n = i + 1;
