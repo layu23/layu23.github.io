@@ -73,6 +73,20 @@
      font-size: 16px;
      font-weight: bolder
  }
+
+ .carousel-indicators li{
+     background-color: #fff;
+     border-radius: 0;
+     width: 40px;
+     height: 1px;
+     border: none;
+ }
+ .carousel-indicators .active{
+     margin: 1px;
+     height: 1px;
+    width: 40px;
+    background-color: #000;
+ }
  /* 内容部分 */
  
  .jumbotron {
@@ -112,7 +126,6 @@
  
  .skills {
      text-align: center;
-     margin-top: 30px
  }
  
  .skills>li {
@@ -146,7 +159,9 @@
  .showMore {
      width: 100px;
      background-color: transparent;
-     border: 1px solid #000
+     -moz-box-shadow:0px 2px 5px #333333;
+     -webkit-box-shadow:0px 2px 5px #333333;
+        box-shadow:0px 2px 5px #333333;
  }
   .showMe:hover,
 .showMore:hover {
@@ -161,6 +176,7 @@
      padding-right: 0;
      padding-left: 0;
     cursor: pointer;
+    margin-bottom: 20px;
     }
 
  .hobby-list-title{
@@ -172,7 +188,7 @@
     left:50%;
     border-radius: 50%;
     background: rgba(0,0,0,.7);
-    transition: all .3s ease-in;    
+    transition: all .2s ease-in;    
 }
 .hobby-list-title>p{
     text-align: center;
@@ -260,7 +276,7 @@
      color: #9DC6EA
  }
  /* 喜欢页面 */
-.want-see-you{height: 1200px;background-color: #fff}
+.want-see-you{background-color: #fff}
 /* 分享页面 */
 
 .share::before{content: '';
