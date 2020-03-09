@@ -6,26 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>ByFanYu</title>
+    <title>FanYu(ง •_•)ง奥力给</title>
     <script src=" ../layu23.github.io//lib/jquery.min.js "></script>
     <!-- Bootstrap -->
     <link href="../layu23.github.io//bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <style>
+        .sClass{
+            color: red;
+        }
+        .mClass{
+            color: yellow;
+        }
+    </style>
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!-- [if lt IE 9]> -->
     <script src="../layu23.github.io/lib/html5shiv.min.js"></script>
     <script src="../layu23.github.io/lib/respond.min.js"></script>
+    <script src="../layu23.github.io/lib/vue.js"></script>
     <link rel="stylesheet" href="../layu23.github.io/lib/base.css">
     <link rel="icon" href="../layu23.github.io/img/webLogo.ico">
     <!-- <![endif] -->
 </head>
 
-<body>
+<body >
     <!-- 加载页面 -->
-    <div id="loading"><img  alt="" src="../layu23.github.io/img/loading.gif"></div>
+    <div id="loading"><img alt="" src="../layu23.github.io/img/loading.gif"></div>
     <!-- 导航栏 -->
-    <nav class="navbar navbar-default ">
+    <nav class="navbar navbar-default  ">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -35,14 +43,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-                <a class="navbar-brand" href="#"><img src="http://pic.yupoo.com/fanyu24/8fcfa937/208698fe.png" alt=""></a>
+                <a ><div class="logoYu"></div></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class=" active"><a href="#" class="yuBrand" >For-Know <span class="sr-only">(current)</span></a></li>
-
+                    <li class=" active"><a href="#"  ><span class="yuBrand">FanYu24</span>™</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="study.html">学习</a></li>
@@ -71,7 +78,7 @@
                 <a href="share.html">
                     <img src="http://pic.yupoo.com/fanyu24/a969d256/9db587a1.jpg" alt="iu">
                 </a>
-                <div class="carousel-caption">
+                <div class="carousel-caption" >
                     一些分享
                 </div>
             </div>
@@ -104,7 +111,7 @@
                         <div class="caption">
                             <h1>About Me</h1>
                             <h3>关于我</h3>
-                            <hr class=" line">
+                            <hr class="line">
                             <p>一名刚起步的初级程序猿,热爱文学的伪文青</p>
                             <ul class="row skills">
                                 <li class=" col-xs-6  col-md-2">
@@ -132,7 +139,7 @@
                                     java
                                 </li>
                             </ul>
-                            <button type="button" class="btn showMe" data-toggle="tooltip" data-placement="top" title="暂未开放" style="cursor: not-allowed;">我的简历</button>
+                            <button type="button" class="btn showMe" data-toggle="tooltip" data-placement="top" title="敬请期待" style="cursor: not-allowed;">我的简历</button>
                         </div>
                     </div>
                 </div>
@@ -146,9 +153,9 @@
                 <div class="col-sm-12">
                     <div class="thumbnail">
                         <div class="caption">
-                            <h1>My Likes</h1>
-                            <h3>喜欢的</h3>
-                            <hr class=" line">
+                            <h1 class="likesShow">My Likes</h1>
+                            <h3 class="likesShow">喜欢的</h3>
+                            
                             <ul class="row hobby">
                                 <li class=" col-xs-6 col-md-3">
                                     <a >
@@ -189,11 +196,11 @@
                 <div class="col-xs-12">
                     <div class="thumbnail">
                         <div class="caption" style="position: relative;">
-                            <h1>Contact Me</h1>
-                            <h3>联系我</h3>
-                            <hr class=" line">
-                            <p>那时我们有梦，如今深夜饮酒<br>杯子碰到一起那是梦碎的声音</p>
-                            <h4>虞帆</h4>
+                            <h1 class="contactMe">Contact Me</h1>
+                            <h3 class="contactMe">联系我</h3>
+                            
+                            <p class="yuSay">那时我们有梦，如今深夜饮酒<br>杯子碰到一起那是梦碎的声音</p>
+                            <h4 class="myName yuSay">虞帆</h4>
                             <img src="http://pic.yupoo.com/fanyu24/890e6bf8/b50cd725.png" data-src="http://pic.yupoo.com/fanyu24/47304d1d/e19ad97b.jpg" alt="我滴微信" id="twoCode"><br>
                             <img src="http://pic.yupoo.com/fanyu24/890e6bf8/b50cd725.png" data-src="http://pic.yupoo.com/fanyu24/d578056b/8d6781ba.jpg" alt="我滴QQ" id="qqCode" hidden><br>
                             <button class="btn btn-default btn-danger change" >微信/QQ</button>
@@ -208,10 +215,10 @@
     <div class="jumbotron logo">
         <div class=" container con2">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 col-md-12">
                     <div class="thumbnail">
                         <div class="caption">
-                            <img data-src="http://pic.yupoo.com/fanyu24/890e6bf8/b50cd725.png" src="http://pic.yupoo.com/fanyu24/890e6bf8/b50cd725.png" alt="logo">
+                            <img src="../layu23.github.io/img/logoMd.png" alt="logo">
                         </div>
 
                     </div>
@@ -240,10 +247,14 @@
             </div>
         </div>
     </div>
+    <!-- 加载页 -->
+    <div class="win">
+        <div ></div>
+    </div>    
     <!-- 回顶部 -->
-<div class="goTop"></div>
+    <a class="goTop" ></a>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="../layu23.github.io//bootstrap/js/bootstrap.min.js "></script>
-    <script src="../layu23.github.io/lib/yu.js"></script>
+    <script src="../layu23.github.io/lib/yu.js"></script>  
 </body>
 </html>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>ByFanYu</title>
+    <title>byFanYu(ง •_•)ง奥力给</title>
 
     <!-- Bootstrap -->
     <link href="../layu23.github.io//bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,34 +42,48 @@
                       <li role="presentation" class="active study-button" data-study-course="html"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">html</a></li>
                       <li role="presentation" class="study-button" data-study-course="css"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">css</a></li>
                       <li role="presentation" class="study-button" data-study-course="js"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">JavaScript</a></li>
-                      <li role="presentation" class="study-button" data-study-course="java"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">java</a></li>
                     </ul>
                   
                     <!-- Tab panes -->
                     <div class="tab-content study-content">
-                      <div role="tabpanel" class="tab-pane active" id="home"></div>
-                      <div role="tabpanel" class="tab-pane" id="profile">...</div>
+                        <!-- html -->
+                      <div role="tabpanel" class="tab-pane active" id="home">
+                        <h3><span class="label label-danger">写在前面</span></h3>
+                        <p>对于前端学习，我推荐使用VScode！免费不需要破解而且插件强大</p>
+                        <h3><span class="label label-warning">介绍</span></h3>
+                        <p>即超文本标记语言，超文本也就是说除了文字外，它可以说明：图片、音频、视频等，标记也就是html中代码是以标签对形式书写的。目前是第五代版本，所以称为html5。</p>
+                        <h3><span class="label label-info">标签</span></h3>
+                        <p>以下介绍几种常用标签</p>
+                        <p>div</p>
+                      </div>
+                      <div role="tabpanel" class="tab-pane" id="profile">还没写</div>
+                      <!-- js -->
                       <div role="tabpanel" class="tab-pane" id="messages">
                         <h3><span class="label label-default">介绍</span></h3>
                         <p>简称js，由网景公司布兰登 艾奇花十天时间设计完成。原名LiveScript，后来与sun公司(就是发明Java的那个)合作
-                            改名为JavaScript。本质是一种运行在客户端的<span data-toggle="tooltip" data-placement="top" title="无需编译,通常为解释执行" class="study-tip">脚本语言</span>，
+                            改名为JavaScript。本质是一种运行在客户端的<span data-toggle="tooltip" data-placement="top" title="无需编译,直接执行" class="study-tip">脚本语言</span>，
                             主要做界面的<span data-toggle="tooltip" data-placement="top" title="用户进行操作，界面会给反应" class="study-tip">交互效果</span>。
-                            js代码一般写在三个位置，1.html文件中的script标签中；2.html元素中；3.外部js文件引入。
+                            <br>
+                            js代码一般写在三个位置，<br>1.html文件中的script标签中；<br>2.html元素中；<br>3.外部js文件引入。
                             初学常用三种输入输出语句--1.<span data-toggle="tooltip" data-placement="top" title="输入框" class="study-tip">prompt()</span>；
                             2.<span data-toggle="tooltip" data-placement="top" title="弹出框" class="study-tip">prompt()</span>；
                             3.<span data-toggle="tooltip" data-placement="top" title="控制台打印" class="study-tip">console.log()</span>
                         </p>
                         <h3><span class="label label-success">变量</span></h3>
                         <p>js的交互效果其实就是操作界面的数据，而提到数据就需要我们的变量。变量通俗来讲就是我们存放东西的盒子,可以临时存储数据，通过变量名对数据调用，甚至能够修改数据。
-                            在js中我们通过var来声明变量。如：var num = 10;这里是声明了变量num并给它赋值为10，整个表达式就是变量的初始化。js变量的命名规范：1.变量由
-                            字母、数字、下划线_、美元符$组成；2.不能以数字开头；3.不能是关键字如：var for...；4。见名知意，取名应该有意义；5.遵循驼峰命名法，第一个单词首字母小写，
-                            后面单词首字母大写；6严格区分大小写。
+                            <br>
+                            在js中我们通过var来声明变量。<br>如：var num = 10;这里是声明了变量num并给它赋值为10，整个表达式就是变量的初始化。
+                            <br>
+                            js变量的命名规范：
+                            <br>1.变量由
+                            字母、数字、下划线_、美元符$组成；<br>2.不能以数字开头；<br>3.不能是关键字如：var for...；<br>4。见名知意，取名应该有意义；<br>5.遵循驼峰命名法，第一个单词首字母小写，
+                            后面单词首字母大写；<br>6严格区分大小写。
                         </p>
                         <h3><span class="label label-danger">数据类型</span></h3>
-                        <p>js变量基本数据类型：1.数字类型<span data-toggle="tooltip" data-placement="top" title="包括整数浮点数" class="study-tip">number</span>；
-                            2.字符串类型string；3.布尔类型<span data-toggle="tooltip" data-placement="top" title="true和false" class="study-tip">Boolean</span>；
-                            4.对象类型object；5.空类型null；6未定义underfind。获取数据类型的方法：typeof()，
-                            数据类型转换：string->number 1.parseInt()、2.parseFloat()、3.Number()；number->string 1.String()、2.toString()、3.+空串；
+                        <p>js变量基本数据类型：<br>1.数字类型<span data-toggle="tooltip" data-placement="top" title="包括整数浮点数" class="study-tip">number</span>；
+                            <br>2.字符串类型string；<br>3.布尔类型<span data-toggle="tooltip" data-placement="top" title="true和false" class="study-tip">Boolean</span>；
+                            <br>4.对象类型object；<br>5.空类型null；<br>6未定义underfind。<br>获取数据类型的方法：typeof()，
+                            <br>数据类型转换：<br>其他类型转为number 1.parseInt()、2.parseFloat()、3.Number()；<br>其他类型转为->string 1.String()、2.toString()、3.+' '(空字符串)；
                         </p>
                         <h3><span class="label label-default">运算符</span></h3>
                         <p>算术运算符：+、-、*、/、<span data-toggle="tooltip" data-placement="top" title="如5%3为2" class="study-tip">%</span>(取余或取模)
@@ -122,6 +136,10 @@
             </div>
         </div>
     </div>
+    <!-- 加载页 -->
+    <div class="win">
+        <div ></div>
+    </div>   
     <!-- 回顶部 -->
     <a class="goTop" ></a>
 

@@ -48,11 +48,11 @@
             right: 0;
             top: 0;
             bottom: 0;
-            display: none;
+            display: block;
         }
         .win::before{
             content: '';
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(165, 90, 90, 0.5)
             position: absolute;
             left: 0;
             right: 0;
@@ -81,7 +81,51 @@
             height: 50px;
             text-align: center;
         }
-    
+        .times{
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+            margin-left: 100px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .btn1{
+            width: 50px;
+            height: 50px;
+            margin-left: 100px;
+        }
+        .btn-danger{
+            width: 50px;
+            height: 50px;
+        }
+        .back{
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            background-color:rgba(236,238,240, 0.5);
+            transition: all 1s;
+            z-index: 1;
+            
+        }
+        .testImg{
+            position: relative;
+        }
+        .testImg>img{
+            transition: all 2s;
+        }
+
+        .testImgs{
+            width: 100px;
+            height: 100px;
+            background-image: url('../layu23.github.io/img/qlx.jpg');
+            transition: all .6s steps(11);
+        }
+
+        .testImgs:hover{
+            background-position: 100px;
+        }
+        
+        
     </style>
     <!-- Bootstrap -->
     <link href="../layu23.github.io//bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -96,81 +140,105 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-                <a class="navbar-brand" href="#">ByFanYu</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
     <button class="btn btn-primary cl">点击一次</button>
+    
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <div class=" times" id="time">10</div>
+    <button class=" btn btn-info btn1" id="start">开始</button><button class=" btn btn-danger" id="end">结束</button>
+    <div id="tim">
+    </div>
+    <div class="app1">{{msg}}</div>
+    <div class="container">
+        <div class=" row">
+            <div class=" col-xs-6 testImg">
+                <div class="back"></div>
+                <img src="../layu23.github.io/img/qlx.jpg" alt="">
+            </div>
+        </div>
+        <div class="testImgs">
+
+        </div>
+        
+    </div>
     <div class="win">
-        <div class="all">
+        <!-- <div class="all">
             <div class="text">欢迎注册</div>
             <div class="buttons">
-                <button class="btn btn-default quit">确定</button>
+                <button class="btn  btn-default quit">确定</button>
             </div>
-        </div>
+        </div> -->
     </div>
+    <div id="loading"><img  alt="" src="../layu23.github.io/img/default.gif"></div>
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="../layu23.github.io/lib/jquery.min.js "></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="../layu23.github.io/bootstrap/js/bootstrap.min.js "></script>
+    <script src="../layu23.github.io/lib/vue.js"></script>
+    <!-- vue -->
+    <script src="../layu23.github.io/lib/yu.js"></script>
+    <script>
+        var app1 = new Vue({
+            el:'.app1',
+            data:{
+                msg:'ByFanYu',
+            }
+        });
+        
+    </script>
+
+
+
+
     <script>
         $(".quit").click(function(){
             $(".win").css('display',"none")
         })
         $(".cl").click(function(){
             $(".win").css('display',"block")
+        });
+
+        
+        //倒计时
+        $('#start').click(function (){
+            times();
+        });
+        var djs;
+        function times(){
+            var num = $("#time").text();
+            if(num==1){
+                return;
+            }
+            djs = setTimeout('times()',1000);
+            num--;
+            $('#time').text(num);
+        }
+
+        $('#end').click(function (){
+            clearTimeout(djs);
         })
+        
+		// $(function(){
+		// 	var monkey;
+		// 	var peach=1;
+		// 	for(var i=6;i>0;i--){
+		// 		peach=(peach+1)*2;
+		// 	}
+		// 	document.write("刚开始有"+peach+"个桃子");
+		// })
+
+    var num = 1;
+    for (let i = 0; i < 6; i++) {
+        num = (num+1)*2;
+    }
+    console.log(num);
+    
+    //30 14 6 2 
     </script>
 </body>
 

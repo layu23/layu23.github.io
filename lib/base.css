@@ -14,16 +14,56 @@
      margin-left: -50px;
      top: 50%;
      margin-top: -50px;
-     z-index: 999;
+     z-index: 1032
+ }
+ .win{
+     position: fixed;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+    z-index: 1031;
+ }
+ .win::before{
+     content: '';
+     background-color: #fff;
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
  }
  /* 导航条 */
-
+.logoYu{
+    background-image: url('../img/logoWeb.png');
+    width: 34px;height: 32px;
+    line-height: 54px;
+    position: relative;
+    left: 2%;
+    top: 50%;
+    margin-top: 8px;
+    transition: background-position .1s ease-out;
+    cursor: pointer;
+}
+.logoYu:hover{
+    background-position: 33px 0;
+}
+.navbar-default .navbar-toggle {
+    border-color: #FFF;
+  }
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+    background-color: #F04A4C;
+  }
+  .navbar-default .navbar-toggle .icon-bar{background-color: #fff;}
+  .yuBrand{font-style: italic;}
  .navbar-brand {
      padding: 10px 15px
  }
  
  .navbar {
      margin-bottom: 0;
+     font-family:  'Glyphicons Halflings';
  }
  
  .navbar-default {
@@ -98,7 +138,12 @@
  #like>.container>.row>div>.thumbnail {
      background-color: #F8F2DC
  }
- 
+.likesShow,
+.contactMe,
+.yuSay,
+.myName{
+    opacity: 0;transition:all 1.5s;transform: translateY(20px);
+} 
  .row>div:nth-of-type(-n+3) {
      border-right: 0
  }
@@ -141,7 +186,6 @@
      border-radius: 50%;
      text-align: center;
      line-height: 90px;
-     font-family: 'COCOGOOSE';
      font-size: 16px;
      font-weight: bolder
  }
@@ -163,20 +207,23 @@
      -webkit-box-shadow:0px 2px 5px #333333;
         box-shadow:0px 2px 5px #333333;
  }
+ .showMore{
+     margin-top: 30px;
+ }
   .showMe:hover,
 .showMore:hover {
      background-color: #F04A4C;
     border: 1px solid #fff;
      transition: 0.5s
  }
- .glyphicon-user{color: #fff;}
+ .glyphicon-user,.glyphicon-heart{color: #fff;}
 
  .hobby>li{
      overflow: hidden;
      padding-right: 0;
      padding-left: 0;
     cursor: pointer;
-    margin-bottom: 20px;
+    
     }
 
  .hobby-list-title{
@@ -188,7 +235,7 @@
     left:50%;
     border-radius: 50%;
     background: rgba(0,0,0,.7);
-    transition: all .2s ease-in;    
+    transition: all .2s ease-in-out;    
 }
 .hobby-list-title>p{
     text-align: center;
@@ -276,9 +323,47 @@
      color: #9DC6EA
  }
  /* 喜欢页面 */
-.want-see-you{background-color: #fff}
-/* 分享页面 */
+.want-see-you{background-color: #fff};
+.gist{
+    font-weight: 300;
+}
+.panel-body>img{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+.likesMenu{background-color: #fff;transition: all .2s ease-in;}
+.likesMenu>li{margin-left: 15px;font-size: 16px;}
+.likesMenu>li>a{font-weight: 300;}
+.likesMenu>li>a:hover,
+.likesMenu>li>a:focus{
+    color: #fff;
+    background-color: #337ab7
+}
 
+.likesTitle{
+    font-size:36px;
+}
+.imgM{
+    width: 100%;
+    
+}
+.panel{
+    margin-top: 20px;
+}
+.panel-footer{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+}
+.song{width: 100%;transition: 1s;}
+.album{padding: 0;overflow: hidden;}
+.album-se{position: absolute;left: -60%; z-index: 1;transform: rotate(45deg);color: #fff;transition: all .2s }
+.album-se2{position: absolute;left: 30%; top:100%;z-index: 1;transform: rotate(45deg);transition: all .2s ease-in-out;}
+.album:hover .album-se{width: 100%;height: 100%;background-color: rgba(0,0,0, 0.5);transform: translate3d(20%,0,0) rotate(45deg);}
+.album:hover .album-se2{width: 100%;height: 100%;background-color: rgba(238,239,240, 0.9);top: 70%;}
+.album:hover img{transform: scale(1.5);}
+.album-se2>div{font-family: sans-serif;}
 .share::before{content: '';
     width: 10px;
     height: 10px;
@@ -352,5 +437,8 @@
      cursor: pointer;
      background-image: url('http://pic.yupoo.com/fanyu24/593027df/934a4c47.png');
      background-size: cover;
-     border: 2px solid #2B70AF
+     border: 2px solid #2B70AF;
+     display: none;
  }
+
+ 
