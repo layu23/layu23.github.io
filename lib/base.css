@@ -6,8 +6,6 @@
  }
  body{background-color: #fff;}
  #loading {position: fixed;width: 100px;height: 100px;left: 50%;margin-left: -50px;top: 50%;margin-top: -50px;z-index: 1032}
- .win{position: fixed;left: 0;right: 0;top: 0;bottom: 0;z-index: 1031;}
- .win::before{content: '';background-color: #fff;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
  /* 导航条 */
 .logoYu{
     background-image: url('../img/logoWeb.png');
