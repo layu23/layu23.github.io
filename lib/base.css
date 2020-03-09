@@ -5,34 +5,9 @@
      text-decoration: none;
  }
  body{background-color: #fff;}
- 
- #loading {
-     position: fixed;
-     width: 100px;
-     height: 100px;
-     left: 50%;
-     margin-left: -50px;
-     top: 50%;
-     margin-top: -50px;
-     z-index: 1032
- }
- .win{
-     position: fixed;
-     left: 0;
-     right: 0;
-     top: 0;
-     bottom: 0;
-    z-index: 1031;
- }
- .win::before{
-     content: '';
-     background-color: #fff;
-     position: absolute;
-     left: 0;
-     right: 0;
-     top: 0;
-     bottom: 0;
- }
+ #loading {position: fixed;width: 100px;height: 100px;left: 50%;margin-left: -50px;top: 50%;margin-top: -50px;z-index: 1032}
+ .win{position: fixed;left: 0;right: 0;top: 0;bottom: 0;z-index: 1031;}
+ .win::before{content: '';background-color: #fff;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
  /* 导航条 */
 .logoYu{
     background-image: url('../img/logoWeb.png');
@@ -133,7 +108,6 @@
      background-color: white;
      margin-bottom: 0
  }
- 
  #like,
  #like>.container>.row>div>.thumbnail {
      background-color: #F8F2DC
@@ -147,37 +121,24 @@
  .row>div:nth-of-type(-n+3) {
      border-right: 0
  }
- 
  .row>div>.thumbnail>.caption {
      text-align: center
  }
- 
  .caption>h3 {
      margin-bottom: 30px
  }
- 
  .line,
- .line2 {
-     margin: auto;
-     height: 2px;
-     width: 50px;
-     background-color: black;
-     margin-bottom: 30px
- }
- 
+ .line2 {margin: auto;height: 2px;width: 50px;background-color: black;margin-bottom: 30px}
  .line2 {
      background-color: #fff
  }
- 
  .skills {
      text-align: center;
  }
- 
  .skills>li {
      height: 150px;
      border-radius: 100px
  }
- 
  .skills>li>div {
      width: 60%;
      height: 60%;
@@ -189,7 +150,6 @@
      font-size: 16px;
      font-weight: bolder
  }
- 
  .skills>li>div:hover {
      background-color: #F04A4C;
      border: 1px solid #fff;
@@ -223,9 +183,7 @@
      padding-right: 0;
      padding-left: 0;
     cursor: pointer;
-    
     }
-
  .hobby-list-title{
     z-index: 1;
     position: absolute;
@@ -258,49 +216,33 @@
 .hobby>li:hover img{
     transform: scale(2.5);
 }
-
- 
- .contact {
+.contact {
      background-color: #E9CFAE
  }
- 
- #qqCode {
+#qqCode {
      position: relative;
      bottom: 20px
  }
- 
- .logo {
+.logo {
      background-color: #16245C;
      height: 150px
  }
- 
  .contact>.container>.row>div>.thumbnail,
  .contact>.container>.row>div>.thumbnail>.caption,
  .contact>.container>.row>div>.thumbnail>.caption>p {
      background-color: transparent
  }
- 
  .logo>.container>.row>div>.thumbnail {
      background-color: transparent;
      border: none
  }
- 
  .contact>.container>.row>div>.thumbnail {
      border: 1px solid rgb(240, 234, 234)
  }
- 
- @media screen and (min-width: 768px) {
-     .logo {
-         padding-top: 10px;
-         padding-bottom: 48px
-     }
- }
- 
  .logo {
      padding-top: 10px;
      padding-bottom: 48px
  }
- 
  .end {
      background-color: #0D1740;
      height: 200px
@@ -310,7 +252,6 @@
      background-color: transparent;
      border: none
  }
- 
  .endList>p>a {
      font-size: 20px;
      cursor: pointer
