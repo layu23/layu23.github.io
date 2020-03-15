@@ -76,30 +76,28 @@
      color: white
  }
  /* 轮播图部分  */
- 
- .carousel-indicators {
-     bottom: 10%
+ .imgText{
+    width: 20%;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    height: 5%;
+    transform: translate(-50%,-50%);
+    bottom: 20%;
+    z-index: 10;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: 0 3px 3px rgba(0,0,0,.6);
+    
  }
- 
- .carousel-caption {
-     bottom: 15%;
-     font-size: 16px;
-     font-weight: bolder
+ @media screen and (min-width: 768px){
+    .imgText{
+        font-size: 20px;
+    }
  }
 
- .carousel-indicators li{
-     background-color: #fff;
-     border-radius: 0;
-     width: 40px;
-     height: 1px;
-     border: none;
- }
- .carousel-indicators .active{
-     margin: 1px;
-     height: 1px;
-    width: 40px;
-    background-color: #000;
- }
  /* 内容部分 */
  
  .jumbotron {
