@@ -33,17 +33,16 @@
                 </div>
             </div>
             <div class=" col-md-12 study-course">
-                <div>&lt;html&gt;</div>
+                <div>Vue</div>
             </div>
             <div class=" col-md-8 col-md-offset-2">
                 <div>
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs study-menu" role="tablist" style="margin-top: 50px;">
-                      <li role="presentation" class="active study-button" data-study-course="html"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">html</a></li>
+                      <li role="presentation" class="active study-button" data-study-course="vue"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Vue</a></li>
                       <li role="presentation" class="study-button" data-study-course="css"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">css</a></li>
                       <li role="presentation" class="study-button" data-study-course="js"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">JavaScript</a></li>
-                    </ul>
-                  
+                    </ul>               
                     <!-- Tab panes -->
                     <div class="tab-content study-content">
                         <!-- html -->
@@ -51,10 +50,58 @@
                         <h3><span class="label label-danger">写在前面</span></h3>
                         <p>对于前端学习，我推荐使用VScode！免费不需要破解而且插件强大</p>
                         <h3><span class="label label-warning">介绍</span></h3>
-                        <p>即超文本标记语言，超文本也就是说除了文字外，它可以说明：图片、音频、视频等，标记也就是html中代码是以标签对形式书写的。目前是第五代版本，所以称为html5。</p>
-                        <h3><span class="label label-info">标签</span></h3>
-                        <p>以下介绍几种常用标签</p>
-                        <p>div</p>
+                        <p>是一套用于构建用户界面的<b>渐进式框架</b>,与其他大型框架不同的是，Vue被设计为可以自底向上逐层应用；核心只关注视图层，容易上手
+                            并且便于与第三方库项目进行整合，当与现代化的工具链以及各种支持类库结合使用时，Vue能够为复杂的单页应用提供驱动
+                            <br>以上来自Vue官网--<a href="https://cn.vuejs.org/v2/guide/">vue的介绍</a><br>
+                        </p>
+                        <h3><span class="label label-success">为什么用vue</span></h3>
+                        <p>首先是因为公司开发都要用框架，不学习使用框架，工作都找不到！<br>
+                            随着vue的学习与应用深入，理解到框架的好处<br>
+                            1.组件化，使我们的工程容易维护，便于后期拓展<br>
+                            2.代码解耦，我们最早使用jQuery，代码相互之间的依赖关系很严重，现在的框架，无论是MVC等，都能帮我们进行分层，更易读写<br>
+                            3.生态环境，主流框架现在都有主流的解决方案<br>
+                            而在vue中，具体的优势是：<br>
+                            1.免除了频繁操作DOM元素，使数据的更改更简单，容易维护利于开发效率<br>
+                            2.响应式系统，监听数据改变而改变页面内容<br>
+                            3.前后端分离，单页面应用用户体验好
+                        </p>
+                        <h3><span class="label label-info">一些坑</span></h3>
+                        <p>
+                            <b>
+                            1.学到vue的过渡动画，想用豆瓣的API做一个电影展示页面。对table用&lt;transition-group&gt;包裹，发现没有作用;
+                            就去官网查，发现是解析DOM模板时的问题
+                            </b><br>
+                            有些 HTML 元素，诸如 &lt;ul&gt;、&lt;ol&gt;、&lt;table&gt; 和 &lt;select&gt;，对于哪些元素可以出现在其内部是有严格限制的。而有些元素，诸如 &lt;li>、&lt;tr> 和 &lt;option>，只能出现在其它某些特定的元素内部。
+                            这会导致我们使用这些有约束条件的元素时遇到一些问题。例如：<br>
+                            我对table内部使用&lt;transition-group&gt;，会被当做无效内容提升到内部，从而渲染错误;
+                            为解决这个问题，可以使用is绑定<br>
+                            &lt;tbody is="transition-group" mode="out-in">
+                                
+                            &lt;/tbody><br>
+                            这样，tbody就会被当作一个&lt;transition-group&gt;进行渲染了;具体戳->><a href="https://cn.vuejs.org/v2/guide/components.html#%E8%A7%A3%E6%9E%90-DOM-%E6%A8%A1%E6%9D%BF%E6%97%B6%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">解析 DOM 模板时的注意事项</a>
+                            <br><br>
+                            <b>2.使用插值表达式的问题</b><br>
+                            使用插值表达式{{}}在网速慢时，会出现在页面加载还是{{msg}}这样的形式，用户体验不好。可以对相应元素使用v-cloak,解决闪烁问题<br>
+                            使用v-text默认是没有闪烁问题的，但是他引用的数据会将元素中的原本内容覆盖，而插值表达式不会。<br><br>
+                            <b>3.axios请求数据，图片403问题</b><br>
+                            1.images。weserv.nl方案<br>
+                            getImage(url){<br>
+                                // 把现在的图片连接传进来，返回一个不受限制的路径<br>
+                                if(url !== undefined){<br>
+                                    return url.replace(/^(http)[s]*(\:\/\/)/,'https://images.weserv.nl/?url=');<br>
+                                }<br>
+                            }<br>
+                            2.no-referrer方案<br>
+                            页头增加<br>
+                            &lt;meta name="referrer" content="no-referrer" /&gt;<br>
+                            img方面<br>
+                            &lt;img referrer="no-referrer|origin|unsafe-url" src="{{item.src}}"/&gt;<br>
+                            如a标签等等都可使用<br><br>
+                            <b>4.vue中使用swiper插件遇到的问题</b><br>
+                            vue中使用 由于swiper是通过ajax异步加载拿到图片 new swiper（）会先执行，等ajax数据获取之后，dom重新渲染，但此时swiper中并不会有ajax请求的新数据 所以我们需要在
+                            swiper实例中设置属性 observer：true
+                            监听swiper实例子元素的更新而初始化swiper   
+                        </p>
                       </div>
                       <div role="tabpanel" class="tab-pane" id="profile">还没写</div>
                       <!-- js -->
